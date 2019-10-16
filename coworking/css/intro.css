@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/GothamPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+html{
+    box-sizing: border-box;
+}
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    height: 100%;
+}
+.intro__bg{
+    background-color: rgba(236,30,121, 0.20);
+    background-image: url(../img/intro/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: multiply;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    height: 100vh;
+}
+.container{
+    max-height: 800px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.intro__inner{
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro__logo{
+}
+.intro__btn{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 0;
+    border: 3px solid #d21c6e;
+    background-color: transparent;
+    padding: 22px 0;
+    width: 182px;
+    cursor: pointer;
+    transition: 2s;
+}
+.intro__btn a{
+    text-decoration: none;
+    color: #d21c6e;
+    transition: 0.5s;
+}
+.intro__btn:hover{
+    transition: background-color 1s;
+    background-color: #d21c6e;
+}
+.intro__btn:hover a{
+    color: #fff;
+}

@@ -1,0 +1,525 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/GothamPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/GothamPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/GothamPro-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/GothamPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('../fonts/GothamPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Italic';
+  src: url('../fonts/GothamPro-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: optional;
+}
+html{
+    box-sizing: border-box;
+}
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    font-family: 'Gotham', sans-serif;
+    padding: 0;
+    margin: 0;
+    line-height: 1.42em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    background-color: #27273e;
+    padding: 9px 0;
+}
+.header__left{
+    margin-left: 19px;
+}
+.header__right{
+    margin-right: 19px;
+    text-align: right;
+}
+.contacts__phone{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Bold';
+}
+.contacts__schedule{
+    text-decoration: underline;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    color: #768abb;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+    transition: 0.3s;
+}
+.contacts__schedule:hover{
+    color: #ab2165;
+}
+.reviews .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews__menu{
+    width: 200px;
+}
+.menu__list {
+    list-style: none;
+    margin-top: 47px;
+}
+.menu__items{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.menu__item{
+    text-decoration: none;
+    font-family: 'Gotham-Bold';
+    color: #ee2d82;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+}
+.menu__item_active:hover{
+    opacity: 0.7;
+}
+.menu__item:hover{
+    color: #343131
+}
+.menu__item2:hover .menu__icon2{
+    content: url(../img/about/team.png);
+
+}
+.menu__item:hover{
+    text-decoration: underline;
+}
+.menu__item1:hover .menu__icon1{
+    content: url(../img/about/01.png);
+}
+.menu__icon{
+    margin-right: 20px;
+}
+.menu__item_active{
+    color: #343131;
+}
+.revievs__main {
+    max-width: 898px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 56px;
+}
+
+.reviews__tabs {
+    max-width: 810px;
+    line-height: 0;
+    width: 100%;
+    margin-bottom: 46px;
+}
+.tabs__links{
+    list-style: none;
+}
+.tabs__item{
+    display: inline-block;
+}
+.tabs__link{
+    text-decoration: none;
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+}
+.tabs__link:hover{
+    text-decoration: underline;
+}
+.tabs__item:after{
+    content: '/';
+    display: inline-block;
+    color: #666464;
+    margin-left: 3px;
+    font-style: italic;
+}
+.tabs__item:last-child:after{
+    display: none;
+}
+.tabs__link_active{
+    color: #ec1e79;
+    text-decoration: underline #fbd2e4;
+}
+.reviews__title{
+    font-weight: 700;
+    color: #221f1f;
+    font-size: 49px;
+    margin-bottom: 60px;
+    line-height: 0;
+}
+.item__reviews:last-child{
+    margin-bottom: 45px;
+}
+
+.item__reviews{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 59px;
+
+}
+.reviews-photo{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+}
+.item__reviews-about{
+    margin-left: 20px;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+.item__reviews-data{
+    font-size: 14px;
+    color: #656464;
+    font-family: 'Gotham-Light', sans-serif;
+    line-height: 21px;
+}
+.item__reviews-name{
+    padding: 10px 0 20px 0;
+    margin: 0;
+}
+.item__review-text{
+    margin: 0;
+    padding: 0;
+    color:#000;
+    font-family: 'Gotham-Light', sans-serif;
+    line-height: 25px;
+}
+.pages__change .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-left: 211px;
+
+}
+.pages__numbers{
+    margin-right: 23px;
+    font-family: 'Gotham-Light', sans-serif;
+    font-size: 14px;
+    color: #656464;
+}
+.pages__items_list{
+    list-style: none;
+    display: flex;
+}
+.pages__items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page__item{
+    display: block;
+    text-decoration: none;
+    font-family: 'Gotham-Bold';
+    font-size: 14px;
+    color: #221f1f;
+    width: 25px;
+    padding: 7px 0;
+    text-align: center;
+}
+.page__item:hover{
+    transition: 0.3s;
+    background-color: #27273e;
+    color: #ec1e79;
+
+}
+.pages__items_list{
+    margin: 0 19px;
+    align-items: center;
+}
+.pages__items_list li{
+    margin-right: 3px;
+}
+.page__item-btn_left{
+    color: #bebdbd;
+}
+.page__item_active{
+    color: #ec1e79;
+    background-color: #27273e;
+}
+.page__item_active:hover{
+    opacity: 0.8;
+}
+.page__item-btn_left, .page__item-btn_right{
+    display: block;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.radio1 ,.radio2:hover{
+    transform: 0.3s;
+    color: #ec1e79;
+}
+.radio-text{
+    cursor: pointer;
+}
+.form{
+    max-width: 700px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+}
+.form .container{
+    width: 80%;
+    padding: 1px 0 50px 0;
+    margin-bottom: 80px;
+}
+.form__title{
+    font-size: 49px;
+    font-family: 'Gotham-Bold';
+    padding-top: 51px;
+    line-height: 0;
+}
+.form__top{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.form__item-title{
+    font-size: 14px;
+    font-family: 'Gotham-Light', sans-serif;
+    margin-bottom: 15px;
+}
+.form__place{
+    border: none;
+    border-radius: 10px;
+    padding: 17px 0 17px 9px;
+    width: 270px;
+    outline-color: #ec1e79;
+}
+.form__place::-webkit-input-placeholder {font-family: 'Gotham-Light'; font-size:14px}
+.form__place::-moz-placeholder          {font-family: 'Gotham-Light'; font-size:14px}
+.form__place:-moz-placeholder           {font-family: 'Gotham-Light'; font-size:14px}
+.form__place:-ms-input-placeholder      {font-family: 'Gotham-Light'; font-size:14px}
+
+
+.form__textarea{
+    padding: 10px 0 0 10px;
+    height: 89px;
+    width: 560px;
+    outline-color: #ec1e79;
+    resize: none;
+    margin-bottom: 21px;
+    border: none;
+}
+.form__radio-title{
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.form__question1, .form__question2{
+    display: none;
+    color: #ec1e79;
+}
+.form__question1{
+    margin-right: 20px;
+}
+.radio-text:hover{
+    color: #ec1e79;
+    transition: 0.3s;
+}
+.radio-btn1, .radio-btn2{
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+
+.radio-btn1:before,.radio-btn2:before{
+    content: '';
+    position: absolute;
+    display: block;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.radio-btn2{
+    margin-left: 20px;
+}
+.form__question1:checked + .radio-btn1, .form__question2:checked + .radio-btn2{
+    border: 1px solid #ec1e79;
+        transition: 0.3s;
+
+}
+.form__question1:checked + .radio-btn1:before, .form__question2:checked + .radio-btn2:before{
+    background-color: #ec1e79;
+    transition: 0.3s;
+
+}
+.form-btn_position{
+    position: relative;
+}
+.form-btn{
+    position: absolute;
+    top: -30px;
+    padding: 19px 22px 23px 21px;
+    line-height: 0;
+    right: 0;
+    background-color: #27273e;
+    font-family: 'Gotham-Bold';
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    box-shadow: 5px 5px 1px #ccc;
+}
+.form-btn:hover{
+    transition: color 2s;
+    color: #ec1e79;
+    animation:move;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+.form-btn:active{
+    box-shadow: none;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+@keyframes move{
+    from{background-color: transparent;}
+    to{background-color: #27273e;}
+}
+.footer{
+    padding: 10px 0;
+    background-color: #27273e;
+    margin-top: 40px;
+}
+.footer__column{
+    width: 30%;
+    text-align: center;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__icons{
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.social__icon{
+    background-color: #d4d4d8;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.social__icon:last-child{
+    margin-right: 0;
+}
+.icon_vk{
+    background-image: url(../img/footer/vk.png);
+    height: 20px;
+}
+.icon_vk:hover{
+    background-color: #eb1e79;
+}
+.icon_fb{
+    background-image: url(../img/footer/fb.png);
+    height: 20px;
+}
+.icon_fb:hover{
+    background-color: #eb1e79;
+}
+.icon_gp{
+    background-image: url(../img/footer/gp.png);
+    height: 20px;
+}
+.icon_gp:hover{
+    background-color: #eb1e79;
+}
+.icon_tw{
+    background-image: url(../img/footer/tw.png);
+    height: 20px;
+}
+.icon_tw:hover{
+    background-color: #eb1e79;
+}
+.icon_mail{
+    background-image: url(../img/footer/mail.png);
+    height: 20px;
+}
+.icon_mail:hover{
+    background-color: #eb1e79;
+}
+
+.footer__social_title{
+    color: #fff;
+    font-family: 'Gotham';
+}
+.footer__author{
+    color: #d0d0d5;
+    font-family: 'Gotham';
+}
+.footer__author span{
+    font-family: 'Gotham-Bold';
+    color: #fff;
+}
