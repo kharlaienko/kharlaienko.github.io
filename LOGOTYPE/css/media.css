@@ -179,6 +179,12 @@
         padding: 0;
     }
 }
+@media(max-width:375px){
+    .services__item-btn-order {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+}
 @media(min-width:701px){
     .menu ul{
         display: block !important;
