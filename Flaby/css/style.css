@@ -215,6 +215,9 @@ a{
     .header{
         height: 100vh;
     }
+     .header-left{
+        max-width: 600px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
     .nav__list{
