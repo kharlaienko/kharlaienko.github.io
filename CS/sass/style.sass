@@ -1,0 +1,836 @@
+*
+   padding: 0
+   margin: 0
+   border: 0
+   -moz-box-sizing: border-box
+   -webkit-box-sizing: border-box
+   box-sizing: border-box
+
+   &:before, &:after
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+\:focus, :active
+      outline: none
+
+a
+   &:focus, &:active
+      outline: none
+
+nav, footer, header, aside
+   display: block
+
+html, body
+   height: 100%
+   width: 100%
+   font-size: 100%
+   line-height: 1
+   font-size: 14px
+   -ms-text-size-adjust: 100%
+   -moz-text-size-adjust: 100%
+   -webkit-text-size-adjust: 100%
+   -khtml-text-size-adjust: 100%
+
+input, button, textarea
+   font-family: inherit
+
+input::-ms-clear
+   display: none
+
+button
+   cursor: pointer
+   background: none
+
+   &::-moz-focus-inner
+      padding: 0
+      border: 0
+
+a
+   text-decoration: none
+
+   &:visited, &:hover
+      text-decoration: none
+ul
+   list-style: none
+ul-li
+      list-style: none
+
+img
+   vertical-align: top
+
+h1, h2, h3, h4, h5, h6
+   font-size: inherit
+   font-weight: inherit
+
+//RESET ======================
+//FONTS ======================
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap')
+//FONTS ======================
+// VARS ======================
+$font: 'Roboto', sans-serif
+$mww: 1170px
+$mw: $mww + 15px
+// MEDIA =======
+$media-min-sm: 576px
+$media-min-md: 768px
+$media-min-lg: 992px
+$media-min-xl: 1200px
+
+$media-max-sm: 575.98px
+$media-max-md: 767.98px
+$media-max-lg: 991.98px
+$media-max-xl: 1199.98px
+// MEDIA =======
+// VARS ======================
+// MAIN SETTINGS ======================
+.wrapper
+   width: 100%
+   min-height: 100%
+   overflow: hidden
+   display: flex
+   flex-direction: column
+
+.container
+   max-width: $mw
+   margin: 0 auto
+   width: 100%
+   padding: 0 10px
+body
+   font-family: $font
+
+.bg
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   background-attachment: fixed
+
+#map
+   width: 100%
+   height: 332px
+// MAIN SETTINGS ======================
+.header
+   position: absolute
+   top: 0
+   left: 50%
+   transform: translateX(-50%)
+   width: 100%
+   border-bottom: 1px solid rgba(#7c7c7c, .38)
+   padding: 21px 0 19px 
+   &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__logo 
+      flex-basis: 200px
+   &__menu
+      margin-right: 54px
+      flex-basis: 659px
+   &__social
+      flex-basis: 169px
+@media screen and ( max-width:$media-max-lg )
+   .header
+      &__inner
+         justify-content: space-between
+      &__logo
+         flex-basis: 0
+      &__social
+         flex-basis: 0
+// MENU ======================
+.menu
+   &__list
+      display: flex
+      justify-content: space-between
+   &__item
+      display: inline-block
+   &__link
+      color: #fff
+      font-size: 18px
+      color: #868686
+      display: inline-block
+      position: relative
+      transition: .3s ease
+      &:after
+         content: ''
+         position: absolute
+         height: 3px
+         width: 0
+         background-color: #11749e
+         top: 63px
+         left: 50%
+         transition: .5s ease
+      &:hover
+         color: #11749e
+         &:after
+            left: 0
+            width: 100%
+// MEDIA ======================
+@media screen and ( max-width:$media-max-lg )
+   .hamburger
+      .line
+         height: 3px
+         width: 33px
+         margin-top: 6px
+         background-color: #fff
+         transition: all 1s ease
+   .menu
+      margin-right: 0
+      flex-basis: 0
+      &__list
+         display: none
+         flex-direction: column
+         align-items: center
+         justify-content: space-around
+         text-align: center
+      &__item
+         width: 100%
+      &__link
+         display: block
+   .open
+      position: absolute
+      left: 0
+      top: 0
+      display: flex
+      background-color: #11749e
+      width: 100%
+      height: 100vh
+      z-index: 100
+   .hamburger-open
+      position: absolute
+      z-index: 1
+      top: 4px
+      right: 23px
+      z-index: 101
+      & .line 
+         transform: rotate(-45deg) translate(-15.3px, 12px)
+         &:nth-child(2)
+            opacity: 0
+         &:nth-child(3)
+            transform: rotate(45deg) translate(0, 2.1px)
+// MEDIA ======================
+// MENU ======================
+// SOCIAL ======================
+.social
+   &__list
+      display: flex
+      justify-content: space-between
+   &__item
+      display: inline-block
+      vertical-align: middle
+   &__link
+      display: inline-block
+      &_fb
+         width: 18px 
+         & svg
+            width: 100%
+            height: 100%
+      &_tw
+         width: 18px
+         & svg
+            width: 100%
+            height: 100%
+      &_sk
+         width: 18px
+         & svg
+            width: 100%
+            height: 100%
+      &_in
+         width: 18px
+         & svg
+            width: 100%
+            height: 100%
+      & svg
+         fill: #fff
+         transition: .3s ease
+         &:hover
+            transform: scale(1.2)
+            fill: #11749e
+@media screen and ( max-width:$media-max-lg )
+   .social
+      &__item
+         margin-right: 20px
+      &__item:last-child
+         margin-right: 0
+// SOCIAL ======================
+
+// INTRO ======================
+.intro
+   background-image: url(../img/intro/intro-bg.jpg)
+   background-attachment: fixed
+   background-size: cover
+   background-position: center
+   height: 100vh
+   flex: 1 1 auto
+   display: flex
+   flex-direction: column
+   justify-content: center
+   text-align: center
+   &__inner
+   &__text
+   &__title
+      color: #f5f5f5
+      font-size: 153px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: -1.92px
+   &__subtitle
+      color: #11749e
+      font-size: 25px
+      font-weight: 500
+      line-height: 51.19px
+      text-transform: uppercase
+      letter-spacing: 7.88px
+   &__scroll
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 32px
+   &__btn-text
+      color: #fff
+      font-size: 13px
+      line-height: 22px
+   &__btn
+      width: 66px 
+      height: 66px
+      display: inline-block
+      margin: 19px auto 0
+      border: 1px solid #fff
+      border-radius: 50%
+      position: relative
+      transition: .6s
+      &:hover
+         border-color: #11749e
+      & svg
+         animation: arrow 1.5s  infinite linear 
+         position: absolute
+         fill: #fff
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -40%)
+         width: 40%
+         height: 40%
+         transition: .3s
+      &:hover svg
+         fill: #11749e
+
+@media screen and ( max-width:$media-max-lg )
+   .intro
+      &__title
+         font-size: 120px
+      &__scroll
+         &-open
+            display: none
+@media screen and ( max-width:$media-max-sm )
+   .intro
+      &__title
+         font-size: 55px
+      &__subtitle
+         line-height: 20px
+         font-size: 18px
+      
+   
+// INTRO ======================
+//  ANIMATIONS ======================
+@keyframes arrow
+   0%
+      top: 25%
+   50%
+      top: 65%   
+   100%
+      top: 78%
+   
+@keyframes letter_w
+   0%
+      fill: rgba(#ffffff, 0)
+      stroke-dasharray: 0 1341
+   20%
+      stroke-dasharray: 1341 0
+      fill: rgba(#ffffff, 0)
+   21%
+      fill: rgba(#ffffff, .5)
+   22%
+      fill: rgba(#ffffff, 1)
+   100%
+@keyframes letter_b
+   0%
+      fill: rgba(#000, 0)
+   40%
+      fill: rgba(#000, .5)
+   80%
+      fill: rgba(#000, 1)
+   100%
+//  ANIMATIONS ======================
+// FREE BLOCKS ======================
+//TitleBox ===
+.title-box 
+   padding: 70px 0
+   text-align: center
+   position: relative
+   &__title
+      font-size: 38px
+      font-weight: 500
+      line-height: 45.06px
+      text-transform: uppercase
+      z-index: 10
+      &_white
+         color: #fff
+      &_black
+         color: #222222
+   &__letter
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0.18
+      color: #ffffff
+      font-size: 247px
+      line-height: 210.64px
+      text-transform: uppercase
+      z-index: 1
+
+.letter_w
+   animation-name: letter_w
+   animation-duration: 8s
+   animation-timing-function: linear
+   animation-iteration-count: infinite
+.letter_b
+   stroke: black
+   animation-name: letter_b
+   animation-duration: 8s
+   animation-timing-function: linear
+   animation-iteration-count: infinite
+
+//TitleBox ===
+//FeaturesBox ===
+.features-box
+   text-align: center
+   &__icon
+      width: 133px
+      height: 133px
+      margin: 0 auto
+      background-color: #2e85aa
+      border-radius: 50%
+      position: relative
+      & svg
+         position: absolute
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -50%)
+         &:hover
+            transform: translate(-50%, -50%) scale(1.2)
+            stroke: #2e85aa
+   &__title
+      color: #fff
+      font-size: 18px
+      font-weight: 500
+      line-height: 36px
+      text-transform: uppercase
+      margin: 12px 0
+   &__text
+      color: #a4cada
+      font-size: 14px
+      line-height: 24px
+   
+//FeaturesBox ===
+// FREE BLOCKS ======================
+//ABOUT  ======================
+.about
+   background-color: #11749e
+   &-top
+      padding: 80px 0 70px
+      &__features
+         margin: 45px 15px 0
+         display: flex
+         justify-content: space-between
+         width: 100%
+         flex-wrap: wrap
+         &-box
+            margin: 20px 0
+            margin-right: 3.6%
+            flex-basis: 21.4%
+            &:last-child
+               margin-right: 0
+   @media (max-width:$media-max-lg)
+      .about
+         &-top
+            &__features-box
+               flex-basis: 45%
+               margin-right: 5%
+   @media (max-width:$media-max-sm)
+     .about
+         &-top
+            padding: 40px 0 50px
+            &__features-box
+               flex-basis: 100%
+//ABOUT ======================
+
+//WORDK ======================
+//MEDIA ===
+.work
+   &-top
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+   &-content__box
+         flex-basis: 50%
+         background-color: #222222
+         &_bottom
+            order: 1
+            background-color: #fff
+   &-content__img
+      flex-basis: 50%
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+   &-box
+      padding: 17% 15% 20% 15px
+      color: #ffffff
+      &_bottom
+         color: #000
+         padding-left: 10%
+         padding-right: 8.5%
+   &-item__date
+      font-size: 13px
+      line-height: 24px
+   &-item__title
+      font-size: 25px
+      font-weight: 500
+      line-height: 36px
+      text-transform: uppercase
+   &-item__text
+      font-size: 15px
+      line-height: 24px
+      margin-top: 26px
+//MEDIA ===
+@media (max-width:$media-max-lg)
+   .work
+      &-top
+      &-content__box
+         flex-basis: 100%
+         background-repeat: no-repeat
+         background-size: cover
+         background-position: center
+         &_top
+            background-image: url(../img/work/item-bg1.jpg)
+            background-color: rgba(#000000, .7)
+            background-blend-mode: multiply
+         &_bottom
+            color: #ffffff
+            background-image: url(../img/work/item-bg2.jpg)
+            background-color: rgba(#000000, .7)
+            background-blend-mode: multiply
+      &-content__img
+         flex-basis: 100%
+      &-box
+         text-align: center
+         padding-right: 30px
+         padding-left: 30px
+         &_bottom
+            color: #ffffff
+//MEDIA ===
+//WORDK ======================
+
+//BLOG ======================
+.blog
+   padding-top: 92px
+   text-align: center
+   &-top
+      &__subtitle
+         color: #222222
+         font-size: 30px
+         line-height: 37px
+         margin-bottom: 73px
+   &-content__items
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: flex-start
+      padding-bottom: 90px
+   &-footer
+      background-color: #11749e
+      padding: 100px 0
+      &__items
+         display: flex
+      &__item
+         display: flex
+         align-items: center
+         max-width: 552px
+         margin-right: 63px
+         text-align: left
+         &:last-child
+            margin-right: 0
+      &__icon
+         margin-right: 34px
+      &__text
+         color: #9bc5d6
+         font-size: 15px
+         line-height: 24px
+.blog-item
+   flex-basis: 258px
+   text-align: center
+   margin-top: 50px
+   &__img
+      width: 270px
+      height: 280px
+   &__title
+      color: #11749e
+      font-size: 18px
+      font-weight: 500
+      line-height: 36px
+      text-transform: uppercase
+      margin-top: 35px
+   &__text
+      color: #222222
+      font-size: 14px
+      line-height: 24px
+//MEDIA ===
+@media ( max-width:$media-max-lg )
+   .blog
+      &-top
+      &__subtitle
+         margin-bottom: 23px
+      &-footer
+         padding: 20px 0
+         &__items
+            display: block
+         &__item
+            margin-top: 50px
+            min-width: 100%
+            &:first-child
+               margin-top: 0
+@media ( max-width:$media-max-xl )
+   .blog-item
+      flex-basis: 45%
+      &__img
+         margin: 0 auto
+@media ( max-width:$media-max-sm )
+   .blog-item
+      display: block
+      margin: 30px auto
+      flex: 0 1 auto
+      &__img
+//MEDIA ===
+//BLOG ======================
+//ACTION ======================
+.action
+   background-repeat: no-repeat
+   background-size: cover
+   background-position: center
+   background-attachment: fixed
+   &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &-left
+      max-width: 469px
+      margin-left: 15px
+      color: #fff
+      &__title
+         font-size: 25px
+         font-weight: 500
+         line-height: 36px
+         text-transform: uppercase
+      &__text
+         color: #9f9f9f
+         margin: 28px 0 63px
+         font-size: 15px
+         line-height: 24px
+   &-choose
+      &__item
+         margin-top: 24px
+         background-color: #11749e
+         padding: 10px 0 10px 19px
+         font-size: 15px
+         font-weight: 500
+         line-height: 24px
+         text-transform: uppercase
+         transition: .3s
+         cursor: pointer
+         &:first-child
+            margin-top: 0
+         &_1
+            max-width: 75%
+         &_2
+            max-width: 80%
+         &_3
+            max-width: 85%
+   &-right
+      padding: 125px 0 95px
+      max-width: 390px
+      margin: 0 auto
+//MEDIA ====
+@media ( min-width:$media-min-md )
+   .action
+      &-choose
+         &__item
+            &:hover
+               max-width: 90%
+               transform: scale(1.1)
+@media ( max-width:$media-max-md )
+   .action
+      padding: 30px 0
+      &__inner
+         text-align: center
+      &-left
+         max-width: 100%
+         display: block
+         margin-left: 0
+      &-right
+         display: none
+      &-choose
+         &__item
+            max-width: 100%
+//MEDIA ====
+//ACTION ======================
+//TEAM ======================
+.team
+   padding: 70px 0 55px
+   text-align: center
+   &__subtitle
+      color: #222222
+      font-size: 30px
+      line-height: 37px
+      margin-top: 60px
+   &__box
+      display: flex
+      margin-top: 60px
+      justify-content: space-between
+      flex-wrap: wrap
+   &-item
+      position: relative
+      flex-basis: 24%
+      &__photo
+         width: 100%
+      &__text
+         background-color: #fff
+         padding: 15px 0 30px
+         width: 216px
+         position: absolute
+         left: 50%
+         bottom: 0
+         transform: translate(-50%, 50%)
+      &__name
+         color: #11749e
+         font-size: 20px
+         font-weight: 500
+         line-height: 24px
+         text-transform: uppercase
+      &__position
+         color: #000000
+         font-size: 15px
+         font-weight: 500
+         line-height: 24px
+         text-transform: uppercase
+//MEDIA ====
+@media ( max-width:1120px )
+   .team
+      &__box
+         margin-top: 0
+      &-item
+         flex-basis: 35%
+         margin: 60px auto 0
+@media ( max-width:$media-max-sm )
+   .team
+      &__box
+         margin-top: 0
+      &-item
+         flex-basis: 100%
+//MEDIA ====
+//TEAM ======================
+//FORM ======================
+.form
+   text-align: center
+   padding: 100px 0
+   &-form
+      margin-top: 76px
+      &__top
+         display: flex
+         margin-bottom: 39px
+         & input
+            border: 1px solid #ffffff
+            background-color: transparent
+            padding: 2px 10px 2px 20px
+            color: #fff
+            width: 100%
+            margin-right: 30px
+            line-height: 36px
+            font-size: 15px
+            &:last-child
+               margin-right: 0
+            &:focus
+               border-color: blue
+   &__message
+      font-size: 15px
+      line-height: 36px
+      border: 1px solid #ffffff
+      background-color: transparent
+      padding: 2px 10px 2px 20px
+      color: #fff
+      width: 100%
+      resize: none
+      height: 151px
+      &:focus
+               border-color: blue
+   &__btn
+      background-color: #11749e
+      min-width: 227px
+      color: #ffffff
+      margin-top: 46px
+      font-size: 24px
+      font-weight: 500
+      line-height: 24px
+      padding: 15px 0
+      text-transform: uppercase
+      cursor: pointer
+      transition: all 0.3s
+      &:hover
+         color: darken(#fff, 20%)
+         background-color: darken(#11749e, 20%)
+         transform: scale(1.1)
+//MEDIA ===
+@media (max-width:$media-max-md)
+   .form
+      text-align: center
+      padding: 50px 0
+      &-form
+         margin-top: 36px
+         &__top
+            display: block
+            margin-bottom: 39px
+            & input
+               margin-top: 20px
+               &:first-child
+                  margin-top: 0
+      &__btn
+         width: 100%
+//MEDIA ===
+//FORM ======================
+
+.footer
+   background-color: #222222
+   &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 30px 0
+   &__site
+      color: #ffffff
+      font-size: 13px
+      letter-spacing: 0.26px
+@media (max-width:$media-max-md)
+   .footer
+      &__inner
+         padding: 30px 0
+         display: block
+         text-align: center
+      &__site
+         margin-bottom: 20px
+         color: #ffffff
+         font-size: 13px
+         letter-spacing: 0.26px
+
+
+//MAP
+.map
+   width: 100%
+   min-height: 300px
