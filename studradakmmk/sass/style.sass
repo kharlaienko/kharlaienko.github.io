@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6
 
 //RESET ======================
 //FONTS ======================
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Roboto:300,400,500,700&display=swap')
+@import @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Roboto:300,400,500,700&display=swap&subset=cyrillic')
 //FONTS ======================
 // VARS ======================
 $fontRoboto: 'Roboto', sans-serif
@@ -215,6 +215,9 @@ body
    height: 48px
    background-color: rgba($black, .3)
    border: 1px solid $white
+   transition: .3s ease-in-out
+   &:hover
+      background-color: rgba($black, .7)
    &_prev
       left: 0
    &_prev, &_next
@@ -222,7 +225,7 @@ body
          content: ''
          position: absolute
          top: 45%
-         left: 55%
+         left: 50%
          transform: translate(-50%, -50%) rotate(-40deg)
          height: 2px
          width: 16.3px
@@ -232,15 +235,52 @@ body
          position: absolute
          height: 2px
          top: 65%
-         left: 55%
+         left: 50%
          transform: translate(-50%, -50%) rotate(40deg)
          width: 16.3px
          background-color: $white
    &_next
       right: 0
       &::after
+         left: 55%
          transform: translate(-50%, -50%) rotate(40deg)
       &::before
+         left: 55%
          transform: translate(-50%, -50%) rotate(-40deg)
 // Slider Style ===
+// HEADER ===
+.header
+   position: fixed
+   padding-top: 10px
+   height: 80px
+   width: 100%
+   top: 0
+   left: 50%
+   z-index: 2
+   transform: translatex(-50%)
+   background-color: rgba($mainColor, 0.8)
+   border-bottom: 3px solid $mainColor
+   &__inner
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+// HEADER ===
+// MENU ===
+.menu
+   flex-basis: 80%
+   &__list
+      display: flex
+      justify-content: space-between
+   &__item
+   &__link
+      color: $white
+      font-family: 'Roboto', sans-serif
+      font-size: 13px
+      text-transform: uppercase
+      font-weight: 300
+
+.submenu
+   display: none
+// MENU ===
 // INTRO ============================
