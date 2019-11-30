@@ -376,9 +376,12 @@ body
    bottom: 20px
    left: 50%
    transform: translatex(-50%)
+   &:hover
+      background-color: $mainColor
    &::after
       content: ''
       position: absolute
+      animation: 2s ease infinite arrowdown
       top: 45%
       left: 50%
       transform: translate(-13%, -50%) rotate(-50deg)
@@ -388,16 +391,17 @@ body
    &::before
       content: ''
       position: absolute
+      animation: 2s ease infinite arrowdown
       top: 45%
       left: 50%
-      transform: translate(-77%, -50%) rotate(-130deg)
+      transform: translate(-76%, -50%) rotate(-130deg)
       height: 2px
       width: 20px
       background-color: $white
 
-@keyframes arrrowdowm
+@keyframes arrowdown
    0%
       top: 15%
    100%
-      top: 45%
+      top: 80%
 // INTRO ============================
