@@ -1,14 +1,10 @@
-const btnScroll = document.querySelector('a.scroll-down');
+const btnScroll = document.querySelector('.scroll-down');
 
-for (let anchor of anchors) {
-   anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const blockID = anchor.getAttribute('href');
-
-      document.querySelector(blockID).scrollIntoView({
-         behavior: 'smooth',
-         block: 'start'
-      });
+btnScroll.addEventListener('click', function(event) {
+   event.preventDefault();
+   const blockId = btnScroll.getAttribute('href');
+   document.querySelector('' + blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
    });
-}
+});
