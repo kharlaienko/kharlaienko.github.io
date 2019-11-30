@@ -1,0 +1,246 @@
+*
+   padding: 0
+   margin: 0
+   border: 0
+   -moz-box-sizing: border-box
+   -webkit-box-sizing: border-box
+   box-sizing: border-box
+
+   &:before, &:after
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+\:focus, :active
+      outline: none
+
+a
+   &:focus, &:active
+      outline: none
+
+nav, footer, header, aside
+   display: block
+
+html, body
+   height: 100%
+   width: 100%
+   font-size: 100%
+   line-height: 1
+   font-size: 14px
+   -ms-text-size-adjust: 100%
+   -moz-text-size-adjust: 100%
+   -webkit-text-size-adjust: 100%
+   -khtml-text-size-adjust: 100%
+
+input, button, textarea
+   font-family: inherit
+
+input::-ms-clear
+   display: none
+
+button
+   cursor: pointer
+   background: none
+
+   &::-moz-focus-inner
+      padding: 0
+      border: 0
+
+a
+   text-decoration: none
+
+   &:visited, &:hover
+      text-decoration: none
+ul
+   list-style: none
+ul-li
+      list-style: none
+
+img
+   vertical-align: top
+
+h1, h2, h3, h4, h5, h6
+   font-size: inherit
+   font-weight: inherit
+
+//RESET ======================
+//FONTS ======================
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Roboto:300,400,500,700&display=swap')
+//FONTS ======================
+// VARS ======================
+$fontRoboto: 'Roboto', sans-serif
+$fontRaleway: 'Raleway', sans-serif
+$mww: 1300px
+$mw: $mww + 15px
+// MEDIA =======
+$media-min-sm: 576px
+$media-min-md: 768px
+$media-min-lg: 992px
+$media-min-xl: 1200px
+
+$media-max-sm: 575.98px
+$media-max-md: 767.98px
+$media-max-lg: 991.98px
+$media-max-xl: 1199.98px
+// MEDIA =======
+// COLOR =======
+$white: #ffffff
+$grey: #cccccc
+$black: #000000
+$mainColor: #0D213F
+// COLOR =======
+// VARS ======================
+// MAIN SETTINGS ======================
+.wrapper
+   width: 100%
+   min-height: 100%
+   overflow: hidden
+   display: flex
+   flex-direction: column
+
+.container
+   max-width: $mw
+   margin: 0 auto
+   width: 100%
+   padding: 0 10px
+body
+   font-family: $fontRoboto
+
+.bg
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   background-attachment: fixed
+   background-color: rgba(#000000, .3)
+   background-blend-mode: multiply
+// SCROLL BAR ===========
+/* width */
+::-webkit-scrollbar
+   width: 10px
+
+/* Track */
+::-webkit-scrollbar-track 
+   background-color: rgba(#cccccc, 1)
+   border-radius: 10px
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+   background: rgba(#0D213F, 1)
+   border-radius: 10px
+
+::-webkit-scrollbar-track-piece
+   background-color: transparent
+// SCROLL BAR ===========
+
+// INTRO ============================
+.intro
+   flex: 1 1 auto
+   display: flex
+   .intro-slider-bg
+      flex: 0 0 100%
+   &__inner
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+   &__inner .container
+      height: 100%
+   &__body
+      position: relative
+      height: 100%
+      display: flex
+      justify-content: space-between
+   &__left
+      padding: 0 5px 0 116px
+      display: flex
+      position: relative
+      flex-direction: column
+      justify-content: center
+   &__right
+      padding: 0 116px 0 5px
+      display: flex
+      justify-content: center
+      align-items: center
+   &__img
+      width: 100%
+   &__title
+      padding-bottom: 44px
+      font-family: $fontRaleway
+      font-weight: 500
+      color: $white
+      font-size: 64px
+      line-height: 85px
+      letter-spacing: 6px
+      text-shadow: 5px 6px 10px rgba(#000000, 0.3)
+      position: relative
+      max-width: 531px
+      &:after
+         content: ''
+         position: absolute
+         left: 0
+         top: 100%
+         display: block
+         height: 2px
+         width: 165px
+         background-color: $white
+   &__subtitle
+      margin-top: 82px
+      font-weight: 300
+      font-size: 20px
+      line-height: 30px
+      letter-spacing: 6px
+      color: $white
+      max-width: 80%
+// Slider Style ===
+.slider-bullets
+   position: absolute
+   left: 116px
+   bottom: 60px
+.slider-bullet
+   height: 8px
+   width: 40px
+   background-color: $grey
+   margin-left: 19px
+   display: inline-block
+   &_active
+      background-color: $white
+   &:first-child
+      margin-left: 0
+
+.slider-btn
+   position: absolute
+   top: 50%
+   transform: translatey(-50%)
+   width: 48px
+   height: 48px
+   background-color: rgba($black, .3)
+   border: 1px solid $white
+   &_prev
+      left: 0
+   &_prev, &_next
+      &::after
+         content: ''
+         position: absolute
+         top: 45%
+         left: 55%
+         transform: translate(-50%, -50%) rotate(-40deg)
+         height: 2px
+         width: 16.3px
+         background-color: $white
+      &::before
+         content: ''
+         position: absolute
+         height: 2px
+         top: 65%
+         left: 55%
+         transform: translate(-50%, -50%) rotate(40deg)
+         width: 16.3px
+         background-color: $white
+   &_next
+      right: 0
+      &::after
+         transform: translate(-50%, -50%) rotate(40deg)
+      &::before
+         transform: translate(-50%, -50%) rotate(-40deg)
+// Slider Style ===
+// INTRO ============================
