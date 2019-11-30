@@ -243,9 +243,7 @@ body {
 }
 
 .slider-bullets {
-  position: absolute;
-  left: 116px;
-  bottom: 60px;
+  margin-top: 72px;
 }
 
 .slider-bullet {
