@@ -268,13 +268,17 @@ body
 // HEADER ===
 // MENU ===
 .menu
-   flex-basis: 80%
+   flex-basis: 90%
    z-index: 4
    &__list
       display: flex
-      justify-content: space-between
+      justify-content: flex-end
    &__item
       position: relative
+      margin-right: 40px
+      padding: 0 5px
+      &:last-child
+         margin-right: 0
       &::after
          content: ''
          position: absolute
@@ -323,12 +327,12 @@ body
       height: 0
       border-style: solid
       border-width: 5px 5px 0 5px
-      border-color: $black transparent transparent transparent
+      border-color: $white transparent transparent transparent
       transition: .3s
    &:hover
       &::before
          border-width: 0 5px 5px 5px
-         border-color: transparent transparent $black transparent
+         border-color: transparent transparent $white transparent
 
 .menu__item_down:hover .submenu
    top: 20px
@@ -378,7 +382,7 @@ body
       position: absolute
       top: 45%
       left: 50%
-      transform: translate(-50%, -50%) rotate(-40deg)
+      transform: translate(-13%, -50%) rotate(-50deg)
       height: 2px
       width: 20px
       background-color: $white
@@ -387,8 +391,14 @@ body
       position: absolute
       top: 45%
       left: 50%
-      transform: translate(-50%, -50%) rotate(-40deg)
+      transform: translate(-77%, -50%) rotate(-130deg)
       height: 2px
       width: 20px
       background-color: $white
+
+@keyframes arrrowdowm
+   0%
+      top: 15%
+   100%
+      top: 45%
 // INTRO ============================

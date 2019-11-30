@@ -353,8 +353,8 @@ body {
 }
 
 .menu {
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
   z-index: 4;
 }
 
@@ -362,13 +362,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .menu__item {
   position: relative;
+  margin-right: 40px;
+  padding: 0 5px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
 }
 
 .menu__item::after {
@@ -434,14 +440,14 @@ body {
   height: 0;
   border-style: solid;
   border-width: 5px 5px 0 5px;
-  border-color: #000000 transparent transparent transparent;
+  border-color: #ffffff transparent transparent transparent;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 .menu__item_down:hover::before {
   border-width: 0 5px 5px 5px;
-  border-color: transparent transparent #000000 transparent;
+  border-color: transparent transparent #ffffff transparent;
 }
 
 .menu__item_down:hover .submenu {
@@ -509,8 +515,8 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-40deg);
-          transform: translate(-50%, -50%) rotate(-40deg);
+  -webkit-transform: translate(-13%, -50%) rotate(-50deg);
+          transform: translate(-13%, -50%) rotate(-50deg);
   height: 2px;
   width: 20px;
   background-color: #ffffff;
@@ -521,9 +527,27 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-40deg);
-          transform: translate(-50%, -50%) rotate(-40deg);
+  -webkit-transform: translate(-77%, -50%) rotate(-130deg);
+          transform: translate(-77%, -50%) rotate(-130deg);
   height: 2px;
   width: 20px;
   background-color: #ffffff;
+}
+
+@-webkit-keyframes arrrowdowm {
+  0% {
+    top: 15%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+@keyframes arrrowdowm {
+  0% {
+    top: 15%;
+  }
+  100% {
+    top: 45%;
+  }
 }
