@@ -237,7 +237,6 @@ body
    height: 48px
    background-color: rgba($black, .3)
    border: 1px solid $white
-   transition: .3s ease-in-out
    &:hover
       background-color: rgba($black, .7)
    &_prev
@@ -383,7 +382,8 @@ body
          text-transform: uppercase
          color: $white
          font-size: 20px
-         
+   .slider__btn_open
+         z-index: 0
    .submenu_open
       padding-top: 20px
       max-height: none !important
@@ -408,11 +408,8 @@ body
          color: $white
          font-weight: 300
 
-   .slider__btn_open
-      z-index: 0
-   .scroll-down_open
-      transition: 0s
-      z-index: 0 !important
+   .scroll-down
+      display: none
    .header__burger
       display: block
 @media ( min-width:$media-min-xl  )
@@ -432,7 +429,8 @@ body
          display: flex
          align-items: center
          justify-content: space-between
-
+   .slider-btn
+      transition: .3s ease
    .menu
       flex-basis: 90%
       z-index: 4
