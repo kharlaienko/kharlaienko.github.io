@@ -539,8 +539,10 @@ body {
   .slider__btn_open {
     z-index: 0;
   }
-  .scroll-down {
-    display: none;
+  .scroll-down_open {
+    -webkit-transition: 0s;
+    transition: 0s;
+    z-index: 0 !important;
   }
   .header__burger {
     display: block;
@@ -705,8 +707,8 @@ body {
   border: 1px solid #ffffff;
   border-radius: 50%;
   position: relative;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: .3s;
+  transition: .3s;
   position: absolute;
   bottom: 20px;
   left: 50%;

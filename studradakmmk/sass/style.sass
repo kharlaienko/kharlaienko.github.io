@@ -410,8 +410,9 @@ body
 
    .slider__btn_open
       z-index: 0
-   .scroll-down
-      display: none
+   .scroll-down_open
+      transition: 0s
+      z-index: 0 !important
    .header__burger
       display: block
 @media ( min-width:$media-min-xl  )
@@ -540,7 +541,7 @@ body
    border: 1px solid $white
    border-radius: 50% 
    position: relative
-   transition: .6s
+   transition: .3s
    position: absolute
    bottom: 20px
    left: 50%
