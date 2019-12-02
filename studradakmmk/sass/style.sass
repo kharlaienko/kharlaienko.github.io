@@ -199,7 +199,7 @@ body
    margin-top: 72px
    position: absolute
    bottom: 5%
-   left: 113px
+   left: 11%
    cursor: pointer
    & li
       font-size: 0
@@ -397,10 +397,12 @@ body
          letter-spacing: 2px
          color: $white
          font-weight: 300
-
    .scroll-down
       display: none
    .header__burger
+      display: block
+@media ( min-width:760px  )
+   .scroll-down
       display: block
 @media ( min-width:$media-min-xl  )
    .menu__item_down
@@ -613,14 +615,14 @@ body
    align-items: center
    &::before
       content: ''
-      height: 1px
+      height: 1.4px
       width: 30%
       margin-right: 20px
       background-color: $black
    &::after
       content: ''
       top: 50%
-      height: 1px
+      height: 1.4px
       margin-left: 30px
       width: 30%
       background-color: $black

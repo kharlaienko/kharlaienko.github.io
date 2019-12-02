@@ -252,7 +252,7 @@ body {
   margin-top: 72px;
   position: absolute;
   bottom: 5%;
-  left: 113px;
+  left: 11%;
   cursor: pointer;
 }
 
@@ -524,6 +524,12 @@ body {
     display: none;
   }
   .header__burger {
+    display: block;
+  }
+}
+
+@media (min-width: 760px) {
+  .scroll-down {
     display: block;
   }
 }
@@ -810,7 +816,7 @@ body {
 
 .title-box::before {
   content: '';
-  height: 1px;
+  height: 1.4px;
   width: 30%;
   margin-right: 20px;
   background-color: #000000;
@@ -819,7 +825,7 @@ body {
 .title-box::after {
   content: '';
   top: 50%;
-  height: 1px;
+  height: 1.4px;
   margin-left: 30px;
   width: 30%;
   background-color: #000000;
