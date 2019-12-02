@@ -804,7 +804,7 @@ body {
 }
 
 .about {
-  padding: 150px 0 50px;
+  padding: 150px 0 100px;
   width: 100%;
 }
 
@@ -933,10 +933,6 @@ body {
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
-.about__right_dots {
-  width: 323px;
-}
-
 .about__right_title {
   font-weight: 500;
   font-size: 18px;
@@ -1046,6 +1042,9 @@ body {
         flex-basis: 50%;
     margin-left: 100px;
   }
+  .about__right_dots {
+    width: 323px;
+  }
   .about__right_more {
     margin: 77px 0 0 50px;
   }
@@ -1054,6 +1053,113 @@ body {
   }
 }
 
-.footer {
+.footer_svg path {
+  fill: red;
+}
+
+.footer__row_blue {
   background-color: #0D213F;
+}
+
+.footer__row_blue .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__column {
+  text-align: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  padding: 20px 10px;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item_icon {
+  margin-right: 20px;
+}
+
+.footer__item_link {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer__row_black {
+  background-color: #000000;
+}
+
+.footer__social {
+  padding: 15px 0;
+  border-right: 1px solid #0D213F;
+  border-left: 1px solid #0D213F;
+  text-align: center;
+}
+
+.footer__social_title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.footer__social_title::before {
+  content: '';
+  height: 2px;
+  top: 50%;
+  right: 105%;
+  width: 60px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.footer__social_list {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__social_item {
+  margin-right: 40px;
+  position: relative;
+}
+
+.footer__social_item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  right: 140%;
+}
+
+.footer__social_item:last-child {
+  margin-right: 0;
 }
