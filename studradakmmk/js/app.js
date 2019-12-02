@@ -10,15 +10,18 @@ const menu_op_3 = document.getElementById('menu_op_3');
 const header = document.querySelector('.header');
 const scrollDown = document.querySelector('.scroll-down');
 
-btnScroll.addEventListener('click', function(event) {
-   event.preventDefault();
-   const blockId = btnScroll.getAttribute('href');
-   document.querySelector('' + blockId).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+// SCROLL BTN
+if (btnScroll) {
+   btnScroll.addEventListener('click', function(event) {
+      event.preventDefault();
+      const blockId = btnScroll.getAttribute('href');
+      document.querySelector('' + blockId).scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+      });
    });
-});
-
+}
+// BURGER
 hamburger.addEventListener('click', () => {
    hamburger.classList.toggle('burger-open');
    menuItems.classList.toggle('menu_open');

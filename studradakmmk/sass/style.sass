@@ -324,7 +324,7 @@ body
       left: 50%
       z-index: 2
       transform: translatex(-50%)
-      background-color: rgba($mainColor, .8)
+      background-color: rgba($mainColor, 1)
       border-bottom: 3px solid $mainColor
       z-index: 10000
       &__inner
@@ -421,7 +421,7 @@ body
       left: 50%
       z-index: 2
       transform: translatex(-50%)
-      background-color: rgba($mainColor, .8)
+      background-color: rgba($mainColor, 1)
       border-bottom: 3px solid $mainColor
       z-index: 10000
       &__inner
@@ -444,7 +444,7 @@ body
          &::after
             content: ''
             position: absolute
-            top: 42px
+            top: 43px
             left: 50%
             height: 3px
             width: 0   
@@ -454,7 +454,18 @@ body
          &:hover
             &::after
                width: 110%   
+         & span
+            position: absolute
+            top: 43px
+            left: 50%
+            height: 3px
+            width: 0   
+            transform: translatex(-50%)
+            background-color: $white
+            transition: width .5s ease
          &_active
+            & span
+               width: 100%
             &::after
                width: 110% 
       &__link
@@ -581,6 +592,7 @@ body
    font-size: 40px
    letter-spacing: 4px
    text-transform: uppercase
+   text-align: center
    line-height: 50px
    text-shadow: 2px 2px 3px rgba($black, 0.3)
    display: flex
@@ -590,7 +602,7 @@ body
       content: ''
       height: 1px
       width: 30%
-      padding-left: 20px
+      margin-right: 20px
       background-color: $black
    &::after
       content: ''
@@ -676,6 +688,7 @@ body
          &:first-child
             margin-top: 0
    &__btn
+      display: inline-block
       background-color: $mainColor
       color: $white
       margin-top: 40px
@@ -865,3 +878,40 @@ body
          width: 28%
 //MEDIA ===
 // FOOTER ============================
+// JOIN PAGE =================================================================================================================
+.join
+   padding-top: 150px
+   &__intro
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      background-blend-mode: multiply
+      background-color: rgba($black, .6)
+      height: 400px
+      position: relative
+   &__title
+      position: absolute
+      width: 100%
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+      font-family: $fontRaleway
+      font-weight: 500
+      color: $white
+      font-size: 64px
+      line-height: 75px
+      letter-spacing: 6px
+      text-shadow: 5px 6px 10px rgba($black, 0.3)
+//MEDIA ====
+@media ( max-width:$media-max-sm  )
+   .join__title
+      font-size: 45px
+      line-height: 60px         
+//MEDIA ====
+// JOIN WHY =================================================
+.join-why
+   padding: 80px 0
+   &__title
+// JOIN WHY =================================================
+// JOIN PAGE ============================
