@@ -104,7 +104,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -115,7 +115,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0d213f;
+  background: rgba(13, 33, 63, 0.7);
   border-radius: 10px;
 }
 
