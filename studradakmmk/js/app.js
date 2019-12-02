@@ -1,8 +1,6 @@
 const btnScroll = document.querySelector('.scroll-down');
 const hamburger = document.querySelector('.header__burger');
 const menuItems = document.querySelector('.menu');
-const sliderBtn = document.querySelector('.slider-btn');
-const sliderBtnPrev = document.querySelector('.slider-btn_prev');
 const menu_1 = document.getElementById('menu_1');
 const menu_op_1 = document.getElementById('menu_op_1');
 const menu_2 = document.getElementById('menu_2');
@@ -23,10 +21,7 @@ btnScroll.addEventListener('click', function(event) {
 
 hamburger.addEventListener('click', () => {
    hamburger.classList.toggle('burger-open');
-   sliderBtn.classList.toggle('slider__btn_open');
-   sliderBtnPrev.classList.toggle('slider__btn_open');
    menuItems.classList.toggle('menu_open');
-   scrollDown.classList.toggle('scroll-down_open');
    menu_op_1.classList.remove('submenu_open');
    menu_op_3.classList.remove('submenu_open');
    menu_op_2.classList.remove('submenu_open');

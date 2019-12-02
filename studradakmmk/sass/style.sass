@@ -693,8 +693,6 @@ body
          left: -3px
          box-shadow: 0 0 0 rgba($black, 0.3)
    &__right
-      &_dots
-      &_more
       &_title
          font-weight: 500
          font-size: 18px
@@ -705,7 +703,7 @@ body
          color: $white
       &_btn
          margin-top: 30px
-         font-size: 13px
+         font-size: 15px
          line-height: 18px
          letter-spacing: 4%
          font-weight: 300
@@ -713,6 +711,7 @@ body
          background-color: $mainColor
          box-shadow: 2px 3px 0 rgba($black, 0.3)
          transition: .3s ease
+         cursor: pointer
          &:hover
             background-color: darken($mainColor, 5)
          &:active
@@ -782,9 +781,6 @@ body
 // ABOUT ============================
 // FOOTER ============================
 .footer
-   &_svg
-      & path
-         fill: red
    &__row_blue
       background-color: $mainColor
       & .container
@@ -804,6 +800,7 @@ body
          margin-right: 20px
       &_link
          color: $white
+         line-height: 24px
          text-transform: uppercase
    &__row_black
       background-color: $black
@@ -834,6 +831,7 @@ body
       &_item
          margin-right: 40px
          position: relative
+         transition: .3s
          &::before
             content: ''
             width: 10px
@@ -844,9 +842,26 @@ body
             top: 50%
             transform: translatey(-50%)
             right: 140%
-
+            transition: .3s
          &:last-child
             margin-right: 0
+         &:hover
+            transform: scale(1.1)
+            &::before
+               background-color: darken($grey, 40%)
 
-
+//MEDIA ===
+@media ( max-width:687px  )
+   .footer__row_blue .container
+      display: block
+   .footer__column
+      border-bottom: 1px solid $black
+      &:last-child
+         border-bottom: none
+@media ( max-width:413px  )
+   .footer__social_title
+      font-size: 15px
+      &::before
+         width: 28%
+//MEDIA ===
 // FOOTER ============================
