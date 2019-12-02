@@ -26,8 +26,10 @@ hamburger.addEventListener('click', () => {
    sliderBtn.classList.toggle('slider__btn_open');
    sliderBtnPrev.classList.toggle('slider__btn_open');
    menuItems.classList.toggle('menu_open');
-   header.classList.toggle('header_menu');
    scrollDown.classList.toggle('scroll-down_open');
+   menu_op_1.classList.remove('submenu_open');
+   menu_op_3.classList.remove('submenu_open');
+   menu_op_2.classList.remove('submenu_open');
 });
 menu_1.addEventListener('click', () => {
    menu_op_1.classList.toggle('submenu_open');

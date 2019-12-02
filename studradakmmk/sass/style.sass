@@ -87,6 +87,7 @@ $white: #ffffff
 $grey: #cccccc
 $black: #000000
 $mainColor: #0D213F
+$bgColor: #EFF0FC
 // COLOR =======
 // VARS ======================
 // MAIN SETTINGS ======================
@@ -270,23 +271,6 @@ body
          transform: translate(-50%, -50%) rotate(-40deg)
 // Slider Style ===
 // HEADER ===
-.header
-      position: fixed
-      padding-top: 10px
-      height: 80px
-      width: 100%
-      top: 0
-      left: 50%
-      z-index: 2
-      transform: translatex(-50%)
-      background-color: rgba($mainColor, 0.8)
-      border-bottom: 3px solid $mainColor
-      &__inner
-         display: flex
-         align-items: center
-         justify-content: space-between
-
-
 .burger__item
    width: 40px
    height: 4px
@@ -310,16 +294,7 @@ body
             transform: rotate(49deg) translate(-4px, 2.1px)
 // HEADER ===
 // MENU ===
-.menu__item_down
-   position: relative
-   &::after
-      content: ''
-      position: absolute
-      width: 100%
-      height: 30px
-      background-color: transparent
-      top: 14px
-      left: 50%
+
 
 
 // MEDIA
@@ -340,16 +315,30 @@ body
       padding-left: 20px
       flex-basis: 100%
 @media ( max-width:$media-max-xl  )
-   .header_menu
-      position: absolute !important
+   .header
+      position: absolute
+      padding-top: 10px
+      height: 80px
+      width: 100%
+      top: 0
+      left: 50%
+      z-index: 2
+      transform: translatex(-50%)
+      background-color: rgba($mainColor, .8)
+      border-bottom: 3px solid $mainColor
+      z-index: 10000
+      &__inner
+         display: flex
+         align-items: center
+         justify-content: space-between
    .menu_open
-      display: block !important
+      left: 50% !important
    .menu
-      display: none
+      display: block
       position: absolute
       top: 100%
       padding-top: 40px
-      left: 50%
+      left: -10000px
       transform: translatex(-50%)
       background-color: $mainColor
       width: 100%
@@ -413,8 +402,17 @@ body
    .header__burger
       display: block
 @media ( min-width:$media-min-xl  )
+   .menu__item_down
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         width: 100%
+         height: 30px
+         background-color: transparent
+         top: 14px
+         left: 50%
    .header
-      z-index: 1000
       position: fixed
       padding-top: 10px
       height: 80px
@@ -423,8 +421,9 @@ body
       left: 50%
       z-index: 2
       transform: translatex(-50%)
-      background-color: rgba($mainColor, 0.8)
+      background-color: rgba($mainColor, .8)
       border-bottom: 3px solid $mainColor
+      z-index: 10000
       &__inner
          display: flex
          align-items: center
@@ -433,7 +432,6 @@ body
       transition: .3s ease
    .menu
       flex-basis: 90%
-      z-index: 4
       &__list
          display: flex
          justify-content: flex-end
@@ -574,7 +572,217 @@ body
    100%
       top: 80%
 // INTRO ============================
-#page-about
+
+// ABOUT ============================
+// Free BOX =====
+.title-box
+   font-family: $fontRaleway
+   color: $black
+   font-size: 40px
+   letter-spacing: 4px
+   text-transform: uppercase
+   line-height: 50px
+   text-shadow: 2px 2px 3px rgba($black, 0.3)
+   display: flex
+   justify-content: center
+   align-items: center
+   &::before
+      content: ''
+      height: 1px
+      width: 30%
+      padding-left: 20px
+      background-color: $black
+   &::after
+      content: ''
+      top: 50%
+      height: 1px
+      margin-left: 30px
+      width: 30%
+      background-color: $black
+// Free BOX =====
+.main
+   flex: 1 1 auto
+   background-color: $bgColor
+.about
+   padding: 150px 0 50px
    width: 100%
-   height: 2000px
-   background-color: red
+   &__top
+      text-align: center
+      padding-bottom: 60px
+      position: relative
+      &::after
+         content: ''
+         height: 1px
+         width: 100%
+         position: absolute
+         left: 0
+         bottom: 0
+         background-color: rgba($black, 1) 
+   &__title
+      background-size: contain
+      z-index: 2
+      position: relative
+      &_letter
+         position: absolute
+         left: 50%
+         transform: translatex(-50%)
+         z-index: 1
+         width: 200px
+         height: auto
+      &.title-box::before
+         top: 50%
+         right: 58%
+         margin-right: 30px
+   &__row
+      max-width: 862px
+      margin: 100px auto 0
+      display: flex
+      justify-content: space-between
+   &__item
+      flex-basis: 40%
+      &_icon
+         margin: 20px auto
+      &_text
+         font-family: $fontRoboto
+         font-weight: 300
+         font-size: 16px
+         line-height: 20px
+         letter-spacing: 2px
+         text-transform: uppercase
+   &__left
+      &_title
+         font-family: $fontRaleway
+         font-weight: 500
+         font-size: 30px
+         line-height: 40px
+         letter-spacing: 5%
+         text-transform: uppercase
+         text-shadow: 3px 2px 4px rgba($black, 0.3)
+      
+      &_list-item
+         font-family: $fontRaleway
+         font-size: 15px
+         line-height: 18px
+         letter-spacing: 4%
+         margin-top: 30px
+         padding-left: 30px
+         position: relative
+         &::before
+            content: url(../img/main/check.png)
+            position: absolute
+            top: 2px
+            left: 0
+            width: 20px
+         &:first-child
+            margin-top: 0
+   &__btn
+      background-color: $mainColor
+      color: $white
+      margin-top: 40px
+      font-size: 14px
+      padding: 20px
+      line-height: 20px
+      text-transform: uppercase
+      box-shadow: -3px 4px 0 rgba($black, 0.3)
+      transition: .3s ease
+      &:hover
+         background-color: darken($mainColor, 5)
+      &:active
+         position: relative
+         top: 4px
+         left: -3px
+         box-shadow: 0 0 0 rgba($black, 0.3)
+   &__right
+      &_dots
+         width: 323px
+      &_more
+      &_title
+         font-weight: 500
+         font-size: 18px
+         text-transform: uppercase
+      &_btns
+         margin-top: 20px
+         text-align: center
+         color: $white
+      &_btn
+         margin-top: 30px
+         font-size: 13px
+         line-height: 18px
+         letter-spacing: 4%
+         font-weight: 300
+         padding: 10px 20px
+         background-color: $mainColor
+         box-shadow: 2px 3px 0 rgba($black, 0.3)
+         transition: .3s ease
+         &:hover
+            background-color: darken($mainColor, 5)
+         &:active
+            position: relative
+            top: 2px
+            left: 3px
+            box-shadow: 0 0 0 rgba($black, 0.3)
+
+
+
+//MEDIA ===
+@media ( max-width:$media-max-md )
+   .about__left
+      padding-left: 0
+   .about__row
+      display: block
+   .about__item
+      margin-top: 40px
+@media ( max-width:$media-max-lg )
+   .about
+      &__body
+         padding-top: 80px
+         & .container
+         margin: 0 auto
+      &__left
+         text-align: center
+         &_box
+            margin-top: 51px
+            background-color: $white
+            padding: 20px
+            box-shadow: 2px 2px 0px rgba($grey, 0.5)
+            font-weight: 400
+      &__right
+         margin-top: 40px
+         text-align: center
+         &_more
+            margin: 30px 0 0 0
+@media ( min-width:$media-min-lg )
+   .about
+      &__body
+         padding-top: 80px
+         & .container
+            display: flex
+            justify-content: space-between
+      &__left
+         flex-basis: 50%
+         padding-left: 50px
+         &_box
+            margin-top: 51px
+            max-width: 372px
+            background-color: $white
+            padding: 20px
+            box-shadow: 2px 2px 0px rgba($grey, 0.5)
+            font-weight: 400
+         &_title
+            max-width: 571px
+      &__right
+         flex-basis: 50%
+         margin-left: 100px
+         &_more
+            margin: 77px 0 0 50px
+         &_btn
+            max-width: 251px 
+//MEDIA ===
+// ABOUT ============================
+// FOOTER ============================
+.footer
+   background-color: $mainColor
+
+.svg
+   & path
+// FOOTER ============================
