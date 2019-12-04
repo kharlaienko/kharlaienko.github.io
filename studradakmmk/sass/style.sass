@@ -129,6 +129,7 @@ body
    flex: 1 1 auto
    display: flex
    position: relative
+   padding-top: 80px
    .intro-slider-bg
       width: 100%
       flex: 0 0 100%
@@ -317,7 +318,7 @@ body
       flex-basis: 100%
 @media ( max-width:$media-max-xl  )
    .header
-      position: absolute
+      position: fixed
       padding-top: 10px
       height: 80px
       width: 100%
@@ -332,12 +333,15 @@ body
          display: flex
          align-items: center
          justify-content: space-between
+      &_open
+         height: 100%
+         overflow-y: scroll
    .menu_open
       left: 50% !important
    .menu
       display: block
       position: absolute
-      top: 100%
+      top: 18%
       padding-top: 40px
       left: -10000px
       transform: translatex(-50%)
@@ -621,7 +625,6 @@ body
       background-color: $black
    &::after
       content: ''
-      top: 50%
       height: 1.4px
       margin-left: 30px
       width: 30%
@@ -926,8 +929,6 @@ body
 //MEDIA ====
 // JOIN WHY =================================================
 
-
-
 .join-why
    padding: 80px 0
    &__body
@@ -955,4 +956,4 @@ body
       & img
          width: 100%
 // JOIN WHY =================================================
-// JOIN PAGE ============================
+// JOIN PAGE ===========================================================================================================================

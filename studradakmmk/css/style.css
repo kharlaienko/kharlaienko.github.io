@@ -131,6 +131,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  padding-top: 80px;
 }
 
 .intro .intro-slider-bg {
@@ -414,7 +415,7 @@ body {
 
 @media (max-width: 1199.98px) {
   .header {
-    position: absolute;
+    position: fixed;
     padding-top: 10px;
     height: 80px;
     width: 100%;
@@ -438,13 +439,17 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .header_open {
+    height: 100%;
+    overflow-y: scroll;
+  }
   .menu_open {
     left: 50% !important;
   }
   .menu {
     display: block;
     position: absolute;
-    top: 100%;
+    top: 18%;
     padding-top: 40px;
     left: -10000px;
     -webkit-transform: translatex(-50%);
@@ -824,7 +829,6 @@ body {
 
 .title-box::after {
   content: '';
-  top: 50%;
   height: 1.4px;
   margin-left: 30px;
   width: 30%;

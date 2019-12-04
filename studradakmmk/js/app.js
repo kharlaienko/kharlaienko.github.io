@@ -24,6 +24,7 @@ if (btnScroll) {
 // BURGER
 hamburger.addEventListener('click', () => {
    hamburger.classList.toggle('burger-open');
+   header.classList.toggle('header_open');
    menuItems.classList.toggle('menu_open');
    menu_op_1.classList.remove('submenu_open');
    menu_op_3.classList.remove('submenu_open');
