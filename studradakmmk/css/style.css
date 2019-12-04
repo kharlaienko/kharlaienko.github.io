@@ -131,7 +131,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding-top: 80px;
 }
 
 .intro .intro-slider-bg {
@@ -418,7 +417,7 @@ body {
     position: fixed;
     padding-top: 10px;
     height: 80px;
-    width: 100%;
+    width: 100.5%;
     top: 0;
     left: 50%;
     z-index: 2;
@@ -449,14 +448,12 @@ body {
   .menu {
     display: block;
     position: absolute;
-    top: 18%;
-    padding-top: 40px;
+    top: 20%;
     left: -10000px;
     -webkit-transform: translatex(-50%);
             transform: translatex(-50%);
     background-color: #0D213F;
     width: 100%;
-    padding: 20px 0 40px 0;
   }
   .menu__list {
     text-align: center;
@@ -787,12 +784,41 @@ body {
   }
 }
 
+.wrapper_fixed {
+  overflow: fixed;
+}
+
 .list-dash::before {
   content: '';
   position: absolute;
   top: 29px;
   left: 10px;
   width: 40px;
+  height: 3px;
+  background-color: #cccccc;
+  -webkit-box-shadow: 1px 3.5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 3.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-box_2 {
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: 2px;
+  color: #000000;
+  text-align: center;
+  max-width: 801px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title-box_2::after {
+  content: '';
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  width: 20%;
   height: 3px;
   background-color: #cccccc;
   -webkit-box-shadow: 1px 3.5px 5px rgba(0, 0, 0, 0.2);
@@ -1318,4 +1344,155 @@ body {
 
 .join-why__right img {
   width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .join-why__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .join-why__body {
+    display: block;
+    margin-top: 35px;
+  }
+  .join-why__left {
+    margin-right: 0;
+  }
+  .join-why__right {
+    display: none;
+  }
+}
+
+.join-join {
+  padding: 10px 0 80px;
+}
+
+.join-join__title {
+  margin: 0 auto;
+}
+
+.join-join__item {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.join-join__subtitle {
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: 300;
+  margin-top: 80px;
+}
+
+.join-join__subtitle:first-child {
+  margin-top: 0;
+}
+
+.join-join__cards {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.join-join__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.join-join__row:first-child {
+  margin-top: 0;
+}
+
+.join-join__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 310px;
+          flex: 0 1 310px;
+  background-color: #ffffff;
+  padding: 20px 5px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.join-join__card_icon img {
+  height: 97px;
+}
+
+.join-join__card_title {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+  line-height: 25px;
+  position: relative;
+  padding: 0 20px 0;
+}
+
+.join-join__card_title::before {
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background-color: #cccccc;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+}
+
+.join-join__card_person {
+  margin-top: 30px;
+  font-style: 16px;
+  font-weight: 300;
+}
+
+.join-join__card_name {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.join-join__card_contact {
+  margin-top: 20px;
+}
+
+.join-join__card_contact:hover .phone path {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  fill: #2763be;
+}
+
+.join-join__card_number {
+  color: #000000;
+  margin-right: 40px;
+}
+
+.join-join__card_phone {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .join-join__title {
+    font-size: 28px;
+  }
+  .join-join__row {
+    display: block;
+  }
+  .join-join__card {
+    margin: 40px auto 0;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  .join-join__card {
+    margin-right: 40px;
+  }
+  .join-join__card:last-child {
+    margin-right: 0;
+  }
 }

@@ -9,6 +9,7 @@ const menu_3 = document.getElementById('menu_3');
 const menu_op_3 = document.getElementById('menu_op_3');
 const header = document.querySelector('.header');
 const scrollDown = document.querySelector('.scroll-down');
+const body = document.querySelector('body');
 
 // SCROLL BTN
 if (btnScroll) {
@@ -29,6 +30,11 @@ hamburger.addEventListener('click', () => {
    menu_op_1.classList.remove('submenu_open');
    menu_op_3.classList.remove('submenu_open');
    menu_op_2.classList.remove('submenu_open');
+   if (body.style.overflow == 'hidden') {
+      body.style.overflow = '';
+   } else {
+      body.style.overflow = 'hidden';
+   }
 });
 menu_1.addEventListener('click', () => {
    menu_op_1.classList.toggle('submenu_open');

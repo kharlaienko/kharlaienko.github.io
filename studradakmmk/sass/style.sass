@@ -129,7 +129,6 @@ body
    flex: 1 1 auto
    display: flex
    position: relative
-   padding-top: 80px
    .intro-slider-bg
       width: 100%
       flex: 0 0 100%
@@ -321,7 +320,7 @@ body
       position: fixed
       padding-top: 10px
       height: 80px
-      width: 100%
+      width: 100.5%
       top: 0
       left: 50%
       z-index: 2
@@ -341,13 +340,11 @@ body
    .menu
       display: block
       position: absolute
-      top: 18%
-      padding-top: 40px
+      top: 20%
       left: -10000px
       transform: translatex(-50%)
       background-color: $mainColor
       width: 100%
-      padding: 20px 0 40px 0
       &__list
          text-align: center
       &__item
@@ -593,6 +590,9 @@ body
 
 // ABOUT ============================
 // Free BOX =====
+.wrapper_fixed
+   overflow: fixed
+
 .list-dash
    &::before
       content: ''
@@ -604,6 +604,25 @@ body
       background-color: $grey
       box-shadow: 1px 3.5px 5px rgba($black, .2)
 
+.title-box_2
+   font-size: 30px
+   line-height: 42px
+   letter-spacing: 2px
+   color: $black
+   text-align: center
+   max-width: 801px
+   text-transform: uppercase
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      top: 115%
+      left: 50%
+      transform: translatex(-50%)
+      width: 20%
+      height: 3px
+      background-color: $grey
+      box-shadow: 1px 3.5px 5px rgba($black, .2)
 
 .title-box
    font-family: $fontRaleway
@@ -955,5 +974,102 @@ body
       margin-left: 50px
       & img
          width: 100%
+// MEDIA ====
+@media ( max-width:$media-max-xl  )
+   .join-why__title
+      font-size: 30px
+      line-height: 35px
+   .join-why__body
+      display: block
+      margin-top: 35px
+   .join-why__left
+      margin-right: 0
+   .join-why__right
+      display: none
+// MEDIA ====
 // JOIN WHY =================================================
+// JOIN JOIN =================================================
+.join-join
+   padding: 10px 0 80px
+   &__title
+      margin: 0 auto
+   &__item
+      text-align: center
+      margin-top: 80px
+   &__subtitle
+      font-size: 25px
+      line-height: 38px
+      font-weight: 300
+      margin-top: 80px
+      &:first-child
+         margin-top: 0
+   &__cards
+      margin-top: 40px
+      font-size: 18px
+   &__row
+      display: flex
+      justify-content: center
+      margin-top: 40px
+      &:first-child
+         margin-top: 0
+   &__card
+      flex: 0 1 310px
+      background-color: $white
+      padding: 20px 5px
+      box-shadow: 0px 4px 4px rgba($black, 0.25)
+      border: 1px solid rgba($black, 0.2)
+      &_icon
+         & img
+            height: 97px
+      &_title
+         font-family: $fontRaleway
+         text-transform: uppercase
+         margin-top: 30px
+         line-height: 25px
+         position: relative
+         padding: 0 20px 0
+         &::before
+            content: ''
+            position: absolute
+            top: 120%
+            left: 50%
+            width: 80%
+            height: 1px
+            background-color: $grey
+            transform: translatex(-50%)
+      &_person
+         margin-top: 30px
+         font-style: 16px
+         font-weight: 300
+      &_name
+         margin-top: 10px
+         text-transform: uppercase
+         font-weight: 500
+      &_contact
+         margin-top: 20px
+         &:hover .phone path
+            transition: .3s ease-in-out
+            fill: lighten($mainColor, 30%)
+
+      &_number
+         color: $black
+         margin-right: 40px
+      &_phone
+         display: inline-block
+         vertical-align: middle
+         margin-right: 20px
+@media ( max-width:$media-max-lg  )
+   .join-join__title
+      font-size: 28px
+   .join-join__row
+      display: block
+   .join-join__card
+      margin: 40px auto 0
+      max-width: 320px
+@media ( min-width:$media-min-lg  )
+   .join-join__card
+      margin-right: 40px
+      &:last-child
+         margin-right: 0
+// JOIN JOIN =================================================
 // JOIN PAGE ===========================================================================================================================
