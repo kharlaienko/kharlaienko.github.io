@@ -340,16 +340,17 @@ body
    .menu
       display: block
       position: absolute
-      top: 20%
+      top: 24%
       left: -10000px
       transform: translatex(-50%)
       background-color: $mainColor
-      width: 100%
+      width: 321px
+      transition: 1s
       &__list
          text-align: center
       &__item
          padding: 0 20px
-         width: 260px
+         width: 100%
          margin: 25px auto 0 
          &_down
             position: relative
@@ -604,6 +605,17 @@ body
       background-color: $grey
       box-shadow: 1px 3.5px 5px rgba($black, .2)
 
+.title-box_3
+   font-family: $fontRaleway
+   font-weight: 500
+   font-size: 50px
+   color: $black
+   line-height: 60px
+   text-transform: uppercase
+   text-align: center
+   text-shadow: 0px 4px 4px rgba($black, 0.25)
+   
+
 .title-box_2
    font-size: 30px
    line-height: 42px
@@ -762,6 +774,9 @@ body
          box-shadow: 2px 3px 0 rgba($black, 0.3)
          transition: .3s ease
          cursor: pointer
+         & a
+            color: $white
+            text-decoration: none
          &:hover
             background-color: darken($mainColor, 5)
          &:active
@@ -1073,3 +1088,65 @@ body
          margin-right: 0
 // JOIN JOIN =================================================
 // JOIN PAGE ===========================================================================================================================
+// FUNCTIONS PAGE ===========================================================================================================================
+.functions
+   padding: 120px 0 80px 0
+   text-align: center
+   &__cards
+      margin-top: 60px
+      display: flex
+      justify-content: center
+   &__left
+      max-width: 400px
+   &__card
+      background-color: rgba($white, .4)
+      padding: 20px 20px 20px 15px
+      text-align: center
+      max-width: 320px
+      margin: 20px 25px
+   &__icon
+      height: 80px
+      & img
+         width: 100%
+   &__list
+      margin-top: 50px
+      text-align: left
+   &__item
+      position: relative
+      margin-top: 30px
+      padding-left: 30px
+      font-family: $fontRaleway
+      font-weight: 300
+      font-size: 15px
+      line-height: 18px
+      &:first-child
+         margin-top: 0
+      &.list-dash
+         &::before
+            width: 20px
+            top: 8px
+            left: -5px
+   &__row
+      display: flex
+// MEDIA ===
+@media ( max-width:$media-max-lg )
+   .functions
+      &__row
+         display: block
+      &__card
+         margin-top: 40px
+@media ( max-width:$media-max-md)
+   .functions
+      &__cards
+         display: block
+      &__row
+         display: block
+      &__card
+         margin: 40px auto
+      &__left
+         max-width: none
+   .title-box_3
+      font-size: 40px
+      line-height: 50px
+// MEDIA ===
+// FUNCTIONS PAGE ===========================================================================================================================
