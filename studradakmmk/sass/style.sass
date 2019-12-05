@@ -345,7 +345,7 @@ body
       transform: translatex(-50%)
       background-color: $mainColor
       width: 321px
-      transition: 1s
+      transition: .3s
       &__list
          text-align: center
       &__item
@@ -591,9 +591,6 @@ body
 
 // ABOUT ============================
 // Free BOX =====
-.wrapper_fixed
-   overflow: fixed
-
 .list-dash
    &::before
       content: ''
@@ -609,12 +606,11 @@ body
    font-family: $fontRaleway
    font-weight: 500
    font-size: 50px
-   color: $black
+   color: $mainColor
    line-height: 60px
    text-transform: uppercase
    text-align: center
    text-shadow: 0px 4px 4px rgba($black, 0.25)
-   
 
 .title-box_2
    font-size: 30px
@@ -1150,3 +1146,134 @@ body
       line-height: 50px
 // MEDIA ===
 // FUNCTIONS PAGE ===========================================================================================================================
+// HISTORY PAGE ===========================================================================================================================
+.section-dash
+   position: relative
+   &::after
+      content: ''
+      height: 1px
+      width: 200%
+      position: absolute
+      left: 0
+      bottom: 0
+      background-color: $black
+.history
+   padding: 120px 0 80px 0
+   &__row
+      margin-top: 70px
+      display: flex
+      justify-content: center
+      position: relative
+      flex-wrap: wrap
+   &__text
+      max-width: 500px      
+      color: $black
+      font-size: 20px
+      font-weight: 500
+      line-height: 25px
+      margin: 0 30px
+      & span
+         font-weight: 700
+         font-size: 20px
+   &__img
+      margin: 0 30px
+      width: 429px
+      & img
+         width: 100%
+// MEDIA ===
+@media screen and ( max-width:1068px )
+   .history__text
+      margin: 20px
+   .history__img
+      order: -1
+      margin: 20px
+
+// MEDIA ===
+// history-comp ==================  
+.history-comp
+   padding: 80px 0
+   text-align: center
+   &__title
+      font-family: $fontRoboto
+      font-size: 35px
+      line-height: 45px
+   &__row
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 50px
+   &__card
+      background-color: rgba($grey, .06)
+      border: 0.5px solid $grey
+      width: 320px
+      padding: 20px
+      font-size: 21px
+      font-weight: 500
+      margin: 0 20px
+      text-transform: uppercase
+      &_position
+         margin: 10px 0
+      &_year
+         margin: 10px 0
+      &_name
+         margin: 10px 0
+      &_photo
+         max-width: 185px
+         height: 178px
+         border-radius: 12px
+         & img
+            width: 100%
+   &__icon
+      width: 140px
+      margin: 0 20px
+      & img
+            width: 100%
+      &_logo
+         width: 250px
+   &__achieve
+      margin-top: 80px
+      &_title
+         font-weight: 500
+         font-size: 28px
+         text-transform: uppercase
+      &_list
+         margin-top: 50px
+         text-align: left
+         font-size: 18px
+      &_item
+         margin: 30px auto
+         max-width: 855px
+         padding: 0 30px 0 50px
+         position: relative
+         &.list-dash
+            &::before
+               top: 7px
+               width: 30px
+      &_text
+         margin-top: 60px
+         text-transform: uppercase
+         font-size: 18px
+         line-height: 25px
+         font-weight: 500
+
+// MEDIA ====
+@media ( max-width:$media-max-lg  )
+   .history-comp
+      &__card
+      &__icon
+         display: none
+@media ( max-width:$media-max-md  )
+   .title-box
+      font-size: 30px
+      line-height: 35px
+   .history-comp
+      &__title
+         margin-bottom: 70px
+      &__row
+         margin-top: 0
+         flex-wrap: wrap
+      &__card
+         margin: 20px
+// MEDIA ====
+// history-comp ==================  
+// HISTORY PAGE ===========================================================================================================================
