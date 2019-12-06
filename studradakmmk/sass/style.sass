@@ -611,6 +611,8 @@ body
    text-transform: uppercase
    text-align: center
    text-shadow: 0px 4px 4px rgba($black, 0.25)
+   max-width: 572px
+   margin: 0 auto
 
 .title-box_2
    font-size: 30px
@@ -633,13 +635,13 @@ body
       box-shadow: 1px 3.5px 5px rgba($black, .2)
 
 .title-box
-   font-family: $fontRaleway
+   font-family: $fontRoboto
    color: $black
-   font-size: 40px
+   font-size: 37px
    letter-spacing: 4px
    text-transform: uppercase
    text-align: center
-   line-height: 50px
+   line-height: 47px
    text-shadow: 2px 2px 3px rgba($black, 0.2)
    display: flex
    justify-content: center
@@ -1211,6 +1213,10 @@ body
       font-weight: 500
       margin: 0 20px
       text-transform: uppercase
+      &_title
+         font-size: 16px
+         font-weight: 400
+         margin: 10px 0
       &_position
          margin: 10px 0
       &_year
@@ -1277,3 +1283,55 @@ body
 // MEDIA ====
 // history-comp ==================  
 // HISTORY PAGE ===========================================================================================================================
+// current-team ===========================================================================================================================
+.current-team
+   padding: 120px 0 80px 0
+   text-align: center
+   &__subtitle
+      margin-top: 40px
+   &__row
+      margin-top: 60px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+   &__card
+      background-color: rgba($grey, .06)
+      border: 0.5px solid $grey
+      width: 320px
+      padding: 20px
+      font-size: 21px
+      font-weight: 500
+      margin: 30px 20px
+      text-transform: uppercase
+      min-height: 348px
+      &_title
+         font-size: 16px
+         font-weight: 400
+         margin: 10px 0
+      &_position
+         margin: 10px 0
+      &_group
+         margin: 10px 0
+      &_name
+         margin: 10px 0
+      &_photo
+         max-width: 185px
+         height: 178px
+         border-radius: 12px
+         & img
+            width: 100%
+   &__icon
+      width: 140px
+      margin: 0 20px
+      & img
+            width: 100%
+      &_logo
+         width: 250px
+// MEDIA ====
+@media ( max-width:1030px  )
+   .current-team
+      &__icon
+         display: none
+// MEDIA ====
+// current-team ===========================================================================================================================

@@ -807,6 +807,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 572px;
+  margin: 0 auto;
 }
 
 .title-box_2 {
@@ -835,13 +837,13 @@ body {
 }
 
 .title-box {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: 40px;
+  font-size: 37px;
   letter-spacing: 4px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 50px;
+  line-height: 47px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1706,6 +1708,12 @@ body {
   text-transform: uppercase;
 }
 
+.history-comp__card_title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
 .history-comp__card_position {
   margin: 10px 0;
 }
@@ -1798,5 +1806,88 @@ body {
   }
   .history-comp__card {
     margin: 20px;
+  }
+}
+
+.current-team {
+  padding: 120px 0 80px 0;
+  text-align: center;
+}
+
+.current-team__subtitle {
+  margin-top: 40px;
+}
+
+.current-team__row {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.current-team__card {
+  background-color: rgba(204, 204, 204, 0.06);
+  border: 0.5px solid #cccccc;
+  width: 320px;
+  padding: 20px;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 30px 20px;
+  text-transform: uppercase;
+  min-height: 348px;
+}
+
+.current-team__card_title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.current-team__card_position {
+  margin: 10px 0;
+}
+
+.current-team__card_group {
+  margin: 10px 0;
+}
+
+.current-team__card_name {
+  margin: 10px 0;
+}
+
+.current-team__card_photo {
+  max-width: 185px;
+  height: 178px;
+  border-radius: 12px;
+}
+
+.current-team__card_photo img {
+  width: 100%;
+}
+
+.current-team__icon {
+  width: 140px;
+  margin: 0 20px;
+}
+
+.current-team__icon img {
+  width: 100%;
+}
+
+.current-team__icon_logo {
+  width: 250px;
+}
+
+@media (max-width: 1030px) {
+  .current-team__icon {
+    display: none;
   }
 }
