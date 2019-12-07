@@ -386,7 +386,6 @@ body
       max-height: 0
       transition: .3s ease-in-out
       &__item
-         padding: 15px 0 10px 15px
          background-color: $mainColor
          border-bottom: 1px solid $black
          border-top: 1px solid $black
@@ -395,6 +394,8 @@ body
             border-bottom: 1px solid $white
             border-top: 1px solid $white
       &__link
+         padding: 15px 0 10px 15px
+         display: block
          font-size: 13px
          letter-spacing: 2px
          color: $white
@@ -528,7 +529,6 @@ body
       &:last-child
          left: -120%
       &__item
-         padding: 15px 0 10px 15px
          background-color: $mainColor
          border-bottom: 1px solid $black
          border-top: 1px solid $black
@@ -537,6 +537,8 @@ body
             border-bottom: 1px solid $white
             border-top: 1px solid $white
       &__link
+         padding: 15px 0 10px 15px
+         display: block
          font-size: 13px
          letter-spacing: 2px
          color: $white
@@ -1425,11 +1427,7 @@ body
    .news
       &-box
          max-width: none
-         &__title
-            font-size: 18px
-            line-height: 24px
-         &__desc
-            font-size: 14px
+         
 @media ( max-width:865px  )
    .news
       &-box
@@ -1443,6 +1441,11 @@ body
          &__article
             display: block
             text-align: center
+         &__title
+            font-size: 20px
+            line-height: 24px
+         &__desc
+            font-size: 16px
          &__img
             margin: 0 auto
             & img 
@@ -1452,3 +1455,94 @@ body
             max-width: none
 // MEDIA ====
 // NEWS ===========================================================================================================================
+// CONTACTS ===========================================================================================================================
+.map
+   width: 100%
+   height: 100%
+.contacts
+   padding: 120px 0 80px 0
+   text-align: center
+   &__inner
+      margin-top: 50px
+      display: flex
+      align-items: flex-start
+      justify-content: center
+   &-map
+      flex-basis: 50%
+      height: 350px
+      margin: 0 30px
+   &-form
+      flex-basis: 50%
+      max-width: 452px
+      background-color: $mainColor
+      margin: 0 30px
+      font-size: 17px
+      padding: 20px
+      color: $white
+      box-shadow: 10px -10px 0 $grey
+      &__item
+         text-align: left
+         margin: 30px 0
+         &-1
+            margin: 0
+            text-align: left
+         &-2
+            margin: 0
+            text-align: left
+      &__title
+         text-align: center
+         font-size: 30px
+         margin-bottom: 20px
+      &__wrapper
+         margin-top: 40px
+         display: flex
+         justify-content: center
+         & input
+            width: 173px
+            padding: 5px 10px
+            height: 36px
+         & textarea
+            padding: 10px 15px
+            height: 95px
+            width: 187px
+            resize: none
+      &__btn
+         color: $black
+         font-weight: 700
+         margin-top: 20px
+         height: 41px
+         width: 228px
+         text-transform: uppercase
+         background-color: $grey
+         transition: .3s ease
+         &:hover
+            background-color: darken($grey, 20%)
+            transform: scale(1.1)
+
+#email
+   margin-top: 23px
+// MEDIA ====
+@media ( max-width:$media-max-lg  )
+   .contacts
+      &__inner
+         flex-wrap: wrap
+      &-map
+         flex-basis: 100%
+      &-form
+         order: -1
+         flex-basis: 100%
+         margin-bottom: 40px
+         text-align: center
+         box-shadow: none
+         font-size: 16px
+         &__title
+            font-size: 22px
+         &__wrapper
+            display: block
+            &_col
+               margin-bottom: 20px
+         &__btn
+            width: 100%
+   
+// MEDIA ====
+// CONTACTS ===========================================================================================================================
