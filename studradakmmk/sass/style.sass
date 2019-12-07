@@ -1335,3 +1335,120 @@ body
          display: none
 // MEDIA ====
 // current-team ===========================================================================================================================
+// NEWS ===========================================================================================================================
+.news
+   padding: 120px 0 80px 0
+   &-box
+      max-width: 1072px
+      margin: 60px auto 0
+      background-color: $mainColor
+      padding: 30px
+      display: flex
+      &__articles
+         order: -1
+      &__article
+         background-color: $white
+         display: flex
+         align-items: center
+         margin-top: 53px
+         &:first-child
+            margin-top: 0
+      &__img
+         max-width: 350px
+         cursor: pointer
+         & img
+            width: 100%
+      &__text
+         max-width: 450px
+         padding: 20px
+      &__title
+         font-size: 22px
+         line-height: 28px
+         font-weight: 500
+         text-transform: uppercase
+         cursor: pointer
+         margin-bottom: 20px
+      &__desc
+         margin-top: 20px
+         font-size: 18px
+         & a
+            text-decoration: none
+            color: $black
+            font-weight: 500
+      &__search
+         width: 249px
+         margin-left: 20px
+         align-self: flex-start
+         position: relative
+         &_place
+            background-color: $white
+            padding: 8px 50px 8px 20px
+            border-radius: 15px
+            width: 100%
+            height: 40px
+            font-family: $fontRoboto
+         &_icon
+            cursor: pointer
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translatey(-50%)
+            transition: .3s ease
+            &:hover
+               transform: scale(1.2) translatey(-50%)
+      &__pages
+         margin-top: 40px
+         display: flex
+         justify-content: center
+         align-items: center
+         &_list
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+         &-item
+            color: $white
+            font-size: 16px
+            cursor: pointer
+            margin: 0 10px
+            font-weight: 700
+            &_active
+               background-color: $white
+               color: $black
+               padding: 5px 8px
+               border-radius: 5px
+         &_arr
+            margin: 0 20px
+            cursor: pointer
+// MEDIA ====
+@media ( max-width:$media-max-lg  )
+   .news
+      &-box
+         max-width: none
+         &__title
+            font-size: 18px
+            line-height: 24px
+         &__desc
+            font-size: 14px
+@media ( max-width:865px  )
+   .news
+      &-box
+         display: block
+         &__search
+            width: 100%
+            margin: 0 0 60px 0
+@media ( max-width:663px  )
+   .news
+      &-box
+         &__article
+            display: block
+            text-align: center
+         &__img
+            margin: 0 auto
+            & img 
+               width: 100%
+               height: 300px
+         &__text
+            max-width: none
+// MEDIA ====
+// NEWS ===========================================================================================================================
