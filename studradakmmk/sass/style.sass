@@ -1546,3 +1546,159 @@ body
    
 // MEDIA ====
 // CONTACTS ===========================================================================================================================
+// AFTER GRADUATE ===========================================================================================================================
+.after-graduate
+   padding: 120px 0 80px 0
+   text-align: center
+   &__body
+      margin-top: 40px
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+   &-item
+      max-width: 485px
+      color: $white
+      margin: 20px 40px
+      @media ( max-width:522px )
+         margin: 20px 0
+      &__title
+         background-color: $mainColor
+         display: inline-block
+         border-radius: 20px
+         padding: 15px 40px 20px 40px
+         margin-bottom: -15px
+         text-transform: uppercase
+      &__photo
+         border: 20px solid $mainColor
+         border-radius: 20px
+         & img
+            width: 100%
+      &__text
+         border: 20px solid $grey
+         background-color: $mainColor
+         width: 80%
+         margin: 0 auto
+         padding: 30px 25px
+      &__btn
+         margin-top: 20px
+         display: inline-block
+         color: $white
+         padding: 10px 20px
+         border: 2px solid $white
+         border-radius: 30px
+         width: 100%
+         font-size: 18px
+         text-transform: uppercase
+         @media ( max-width:424px  )
+            font-size: 15px
+            
+// AFTER GRADUATE ===========================================================================================================================
+// HELP ===========================================================================================================================
+.help
+   padding: 120px 0 80px 0
+   text-align: center
+   &__text
+      margin-top: 60px
+      font-size: 16px
+      font-weight: 500
+      & span
+         font-size: 18px
+         text-transform: uppercase
+   &__row
+      display: flex
+   &__col
+      margin: 0 20px
+   &-item
+      margin: 50px auto
+      text-align: left
+      max-width: 900px
+      @media  ( max-width:562px  )
+         text-align: center
+      &__title
+         font-size: 30px
+         font-weight: 500
+         text-transform: uppercase
+      &__image
+         & img
+            width: 100%
+         @media  ( max-width:562px  )
+            display: none
+      &__clients
+         &-title
+            font-weight: 500
+            text-transform: uppercase
+            margin-top: 20px
+         &-contacts
+            text-align: center
+            margin-top: 20px
+            & span
+               font-weight: 500
+               font-size: 18px
+// HELP ===========================================================================================================================
+// magazine ===========================================================================================================================
+.magazine
+   padding: 120px 0 80px 0
+   text-align: center
+   &__subtitle
+      margin-top: 50px
+      font-size: 30px
+      line-height: 35px
+   &-item
+      margin-top: 20px
+      &__title
+         font-size: 22px
+         text-transform: uppercase
+         font-weight: 500
+      &__column
+         margin-top: 30px
+         display: flex
+         flex-direction: column
+         align-items: center
+         flex-wrap: wrap
+         max-height: 490px
+         @media ( max-width:1020px  )
+            max-height: 833px
+         @media ( max-width:700px  )
+            max-height: none
+      &__box
+         background-color: $grey
+         display: flex
+         justify-content: space-between
+         align-items: center
+         width: 294px
+         height: 58px
+         border: 1px solid $black
+         padding-left: 30px
+         margin: 20px
+         position: relative
+         z-index: 2
+         @media ( max-width:700px  )
+            margin: 20px 0
+         &::after
+           content: ''
+           height: 35px
+           right: -1px
+           bottom: -1px
+           width: 1px
+           background-color: $black
+           position: absolute
+           z-index: 3
+         &::before
+            content: ''
+            height: 1px
+            right: 0px
+            bottom: -1px
+            width: 7px
+            background-color: $black
+            position: absolute
+            z-index: 3
+      &__name
+         font-size: 18px
+         text-transform: uppercase
+      &__link
+         display: block
+         transform: translate(10px, 0)
+      &__arrow
+         & img
+            width: 100%
+// magazine ===========================================================================================================================
