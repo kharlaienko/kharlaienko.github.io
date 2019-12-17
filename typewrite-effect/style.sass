@@ -1,0 +1,41 @@
+html
+   height: 100%
+   width: 100%
+body
+   margin: 0
+   padding: 0
+   font-family: sans-seif
+   height: inherit
+   width: inherit
+   box-sizing: border-box
+
+.intro
+   height: 100%
+   idth: 100%
+   display: flex
+   color: white
+   background: linear-gradient(rgba(#000000, 0.1)), url(https://images.pexels.com/photos/3347244/pexels-photo-3347244.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)
+   background-position: center center
+   background-size: cover
+   background-blend-mode: multiply
+
+.typing
+   position: relative
+   margin-left: 10px
+   &::after
+      content: ''
+      position: absolute
+      width: 2px
+      background-color: white
+      height: 5%
+      right: -5px
+      animation: blink .5s infinite ease
+
+@keyframes blink
+   0%
+      opacity: 1
+   50%
+      opacity: 0
+   100%
+      opacity: 1
+      
