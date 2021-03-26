@@ -83,7 +83,11 @@ body
     font-size: 2rem
     margin: 5vh 0
     text-shadow: 1vh 1vh 2vh $shadow-color
-    
+
+@media (max-width: 575.98px)
+    .primary-title
+        margin: 6vh 0 2vh 0
+
 
 .item-of-porfolio-list
     display: flex
@@ -98,6 +102,15 @@ body
     &>p
         margin: 0 1vh
         text-shadow: 1vh 1vh 2vh $shadow-color
+
+@media (max-width: 575.98px)
+    .item-of-porfolio-list
+        display: block
+
+        &>img
+            height: 5vh
+            margin: 1vh 0
+
 
 a
     color: $font-color
@@ -207,17 +220,17 @@ a
     &_title
         margin: 0 0 5vh 0
 
-    &__item
-        display: flex
-        align-items: center
-        justify-content: center
 
-        &>img
-            height: 5vh
-            margin: 0 1vh
+@media (max-width: 575.98px)
+    .education
+
+        &_title
+            margin: 0 0 5vh 0
+
+        &__item
+            &>img
+                height: 8vh
         
-        &>p
-            margin: 0 1vh
 
 //==========Experience==========
 .experience
@@ -225,9 +238,7 @@ a
     &__item>p>a:hover
         text-decoration: underline
 
-//==========Experience==========
-
-    
+//==========Skills==========
 .skills
 
     &__title
@@ -272,11 +283,10 @@ a
             display: block
 
             
-        &__additional
-            display: flex
-            flex-direction: column
-            align-items: center
+//==========Footer=======
+.footer
+    border-top: 0.4vh solid $lines-color
+    background-color: darken($main-bg-color, 6)
 
-        
-
+//==========Footer=======
     
