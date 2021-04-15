@@ -1,0 +1,260 @@
+//=======VARIABLES=======
+$font-family: 'New Tegomin', sans-serif
+
+$bgc: #cbc4b3
+
+//==fonts==    
+$font-size: 16px
+$font-top-aside: 0.8rem
+$font-top-title: 5rem
+$font-nav-center: 1.5rem
+$font-main-title: 8rem
+$font-subtitle: 3rem
+
+//==border-top==
+$border-nav: 2px solid black 
+
+
+*, *::after, *::before
+    box-sizing: border-box
+
+body
+    font-family: $font-family
+    font-size: $font-size
+    line-height: $font-size
+    background-color: $bgc 
+
+.first-page
+    min-height: 100vh
+    border-bottom: 2px solid #000
+
+    padding-bottom: 20px
+
+
+h1, h2, h3, h4, h5, h6
+    font-family: $font-family
+    font-size: $font-size
+    line-height: $font-size
+
+.container
+    width: 1200px
+    margin: 0 auto
+    padding: 0 20px
+
+
+.line
+    border-bottom: $border-nav
+//======header======
+.header
+    text-align: center
+
+//==title-box==
+.title-box
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    margin: 30px 0
+
+    &__item
+        flex-basis: 600px   
+//==date==
+.date
+    padding: 10px
+    flex-basis: 200px
+
+    border: 1px solid black
+
+    &__text
+        font-size: $font-top-aside
+
+//==paper-title==
+.paper-title
+    align-self: center
+    
+    &__text
+        font-size: $font-top-title
+        line-height: $font-top-title
+        font-weight: bold
+
+//==weather==
+.weather
+    flex-basis: 200px
+    
+    &__title
+        font-size: $font-top-aside
+
+    &__text
+        font-size: $font-top-aside
+        text-align: left
+        font-weight: bold
+
+//==nav==
+.nav
+    margin: 20px 0
+    padding: 20px 0
+
+    border-top: $border-nav
+    border-bottom: $border-nav
+
+    &__list
+        display: flex
+        justify-content: space-between
+
+    &__item
+        margin: 0 10px
+    
+//==paper==
+.paper-today
+    font-size: $font-nav-center
+    font-weight: bold
+
+//===========MAIN===========
+.main
+    padding: 20px 0 40px 0
+
+//==news==
+.news
+    margin: -40px 0 10px 0
+
+    &__box
+        padding: 2px 0
+        text-align: center
+
+        &:last-child
+            margin: 10px 0
+
+    &__title
+        font-size: $font-main-title
+        line-height: $font-main-title
+        font-weight: bold
+    
+    &__subtitle
+        font-size: $font-subtitle
+        line-height: $font-subtitle
+        font-weight: bold
+
+//==content==
+.content
+    display: flex
+    justify-content: space-around
+    align-items: start
+
+    &__row
+        margin: 0 20px
+        flex-basis: 50%
+        
+        &_aside
+            flex-basis: 30%
+
+.big-image>img
+    width: 100%
+
+
+.aside
+
+    &__item
+        padding: 0 0 10px 0
+        
+        &:last-child
+            margin: 10px 0 0 0    
+
+        &>img
+            width: 100%
+
+    &__picture-title
+        font-weight: bold
+        font-size: $font-top-aside
+
+    &__related-title
+        font-size: $font-subtitle
+        font-weight: bold
+
+//=============Second Page==========
+//==vars===
+$second-page-border: 1px solid black
+
+
+.second-page
+    min-height: 100vh
+    padding: 20px 0
+    
+    &__inner
+        display: flex
+        
+
+//=====Fist Column======
+.second-page-primary-title
+    font-weight: bold
+    font-size: 18px
+    padding: 5px 0
+
+.second-page-primary-text
+    font-size: 16px
+
+    
+.first-column
+    flex-basis: 400px
+    padding: 5px 10px
+
+    &__box
+        margin-bottom: 20px
+    
+        &:nth-child(2n)
+            border-top: $second-page-border
+            border-bottom: $second-page-border
+
+    &__title_top
+        margin-bottom: 40px
+
+    &__title
+        margin: 0 0 10px 0
+
+    &__img-box
+        padding: 10px 0
+        display: flex
+        align-items: flex-start
+
+    &__img
+        height: 185px
+        width: 271px
+
+        &-text
+            margin-left: 5px
+    
+//===between column===
+.between-column
+    flex-basis: 166px
+
+    padding: 5px
+
+    border-left: $second-page-border
+    border-right: $second-page-border
+
+    &__title
+        margin-bottom: 20px
+
+//===central-column===
+.central-column
+    flex-basis: 420px
+    padding: 5px 0
+
+
+    &__img-box
+        padding: 0 10px 26px
+
+        border-bottom: $second-page-border
+
+    &__img
+        width: 400px
+        height: 300px
+
+        margin-bottom: 36px
+
+    &__row
+        padding: 0 10px
+
+    &__title
+        margin: 0 auto 10px auto
+        width: 328px
+        text-align: center
