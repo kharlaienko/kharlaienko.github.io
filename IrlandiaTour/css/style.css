@@ -37,6 +37,10 @@ html, body{
     background-position: center;
 
     color: white;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container{
@@ -191,6 +195,21 @@ html, body{
     gap: 2rem;
 }
 
+.svgYT{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.svgFB{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.svgTW{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
 @media (max-width: 576px) {
     .nav__list{
         display: block;
@@ -258,4 +277,25 @@ html, body{
     html, body{
         font-size: 1rem; /* 16px */
     }    
+}
+
+@media (min-width: 1600px) {
+    html, body{
+        font-size: 1.4rem; /* 24px */
+    }
+
+    .svgYT{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .svgFB{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .svgTW{
+        width: 1rem;
+        height: 1rem;
+    }
 }
