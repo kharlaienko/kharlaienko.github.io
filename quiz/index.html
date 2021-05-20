@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Quiz</title>
+	</head>
+	<body>
+		<div class="quiz-form">
+			<div class="quiz-form__title-box">
+				<span class="quiz-form__num">1.</span>
+				<p class="quiz-form__title">
+					Вы регулярно ложитесь в постель в одно и то
+					же время и засыпаете в течение 15 минут
+				</p>
+			</div>
+			<form class="quiz-form__form" action="#">
+				<div class="quiz-form__radio-box">
+					<label class="quiz-form__label" for="answerYesToFirstQuestion">
+						<span class="quiz-form__label_text">Yes</span>
+						<input checked
+						class="quiz-form__radio"
+						id="answerYesToFirstQuestion"
+						name="answerYesToFirstQuestion"
+						type="radio"
+						value="Yes"
+						/>
+						<div class="quiz-form__radio_custom-radio">
+						</div>
+					</label>
+					
+					<label class="quiz-form__label" for="answerYesToSecondQuestion">
+						<span class="quiz-form__label_text">No</span>
+						<input
+						class="quiz-form__radio"
+						id="answerYesToSecondQuestion"
+						name="answerYesToFirstQuestion"
+						type="radio"
+						value="No"
+						/>
+						<div class="quiz-form__radio_custom-radio">
+						</div>
+					</label>
+					<div class="quiz-form__btn-box">
+						<button
+							class="
+								quiz-form__btn
+								quiz-form__btn_back
+								quiz-form__btn-not-active
+							"
+							type="button"
+						>
+							Назад
+						</button>
+						<button
+							class="quiz-form__btn quiz-form__btn_forward"
+							type="button"
+						>
+							Дальше
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
