@@ -79,7 +79,6 @@ body {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 1rem;
     margin-top: 3rem; }
   .quiz-form__btn {
     display: block;
@@ -102,6 +101,7 @@ body {
       width: 1.8rem;
       height: 1.8rem;
       stroke: #fff; }
+.quiz-form__btn:first-child{margin-right:1rem;}
     .quiz-form__btn-not-active {
       background-color: #606060; }
     .quiz-form__btn_forward > svg {
