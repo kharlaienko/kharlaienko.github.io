@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,41 +9,38 @@
 	</head>
 	<body>
 		<div class="quiz-form">
+			<div class="quiz-form__title-box">
+				<span class="quiz-form__num">1.</span>
+				<p class="quiz-form__title">
+					Вы регулярно ложитесь в постель в одно и то
+					же время и засыпаете в течение 15 минут
+				</p>
+			</div>
 			<form class="quiz-form__form" action="#">
-				<div class="quiz-form__title-box">
-					<span class="quiz-form__num">1.</span>
-					<h3 class="quiz-form__title">
-						Вы регулярно ложитесь в постель в одно и то
-						же время и засыпаете в течение 15 минут
-					</h3>
-				</div>
-
 				<div class="quiz-form__radio-box">
-					<label class="quiz-form__label" for="a1">
+					<label class="quiz-form__label" for="answerYesToFirstQuestion">
 						<span class="quiz-form__label_text">Yes</span>
 						<input checked
 						class="quiz-form__radio"
-						id="a1"
-						name="quiz1"
+						id="answerYesToFirstQuestion"
+						name="answerYesToFirstQuestion"
 						type="radio"
 						value="Yes"
 						/>
 						<div class="quiz-form__radio_custom-radio">
-							<svg class="custom-radio__svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
 						</div>
 					</label>
 					
-					<label class="quiz-form__label" for="a2">
+					<label class="quiz-form__label" for="answerYesToSecondQuestion">
 						<span class="quiz-form__label_text">No</span>
 						<input
 						class="quiz-form__radio"
-						id="a2"
-						name="quiz1"
+						id="answerYesToSecondQuestion"
+						name="answerYesToFirstQuestion"
 						type="radio"
 						value="No"
 						/>
 						<div class="quiz-form__radio_custom-radio">
-							<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
 						</div>
 					</label>
 					<div class="quiz-form__btn-box">
@@ -55,39 +52,13 @@
 							"
 							type="button"
 						>
-							<svg
-								class="quiz-form__btn_svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="1"
-									d="M15 19l-7-7 7-7"
-								></path>
-							</svg>
-							<span>Назад</span>
+							Назад
 						</button>
 						<button
 							class="quiz-form__btn quiz-form__btn_forward"
 							type="button"
 						>
-							<span>Дальше</span>
-							<svg
-								class="quiz-form__btn_svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="1"
-									d="M9 5l7 7-7 7"
-								></path>
-							</svg>
+							Дальше
 						</button>
 					</div>
 				</div>
