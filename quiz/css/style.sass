@@ -56,19 +56,21 @@ body
 		letter-spacing: 0.05rem
 	
 	&__radio-box
-		width: 90%
+		width: 93%
 		margin-left: 1.5rem
 
+	&__input-box
+		width: 100%
+		position: relative
+
 	&__label
+		width: 100%
+
 		border: 2px solid $form-color-light-green
 		border-radius: 1rem
 
 		padding: 0 1.5rem 0 2.5rem
 		margin-bottom: 0.5rem
-
-		display: flex
-		justify-content: space-between
-		align-items: center
 
 		cursor: pointer
 
@@ -99,7 +101,7 @@ body
 		letter-spacing: 0.1em
 
 		width: 100%
-		max-width: 10rem 
+		max-width: 9.8rem 
 
 		padding: 0.5rem	
 
@@ -141,6 +143,11 @@ body
 		display: none
 
 	&__radio_custom-radio
+		position: absolute
+		right: 3%
+		top: 50%
+		transform: translateY(-65%)
+
 		display: inline-flex
 		align-items: center
 		justify-content: center
@@ -160,11 +167,11 @@ body
 			opacity: 0
 			
 
-	&__radio:checked + .quiz-form__radio_custom-radio::after
+	&__radio:checked ~ .quiz-form__radio_custom-radio::after
 		transition: opacity 0.4s ease
 		opacity: 1
 
-	&__radio:checked .quiz-form__label
+	&__radio:checked + .quiz-form__label
 		background-color: $form-color-answered
 
 
