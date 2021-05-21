@@ -18,8 +18,7 @@
 			</div>
 			<form class="quiz-form__form" action="#">
 				<div class="quiz-form__radio-box">
-					<label class="quiz-form__label" for="answerYesToFirstQuestion">
-						<span class="quiz-form__label_text">Yes</span>
+					<div class="quiz-form__input-box">
 						<input checked
 						class="quiz-form__radio"
 						id="answerYesToFirstQuestion"
@@ -27,12 +26,12 @@
 						type="radio"
 						value="Yes"
 						/>
+						<label class="quiz-form__label quiz-form__label_text" for="answerYesToFirstQuestion">Yes</label>
 						<div class="quiz-form__radio_custom-radio">
 						</div>
-					</label>
-					
-					<label class="quiz-form__label" for="answerYesToSecondQuestion">
-						<span class="quiz-form__label_text">No</span>
+					</div>
+
+					<div class="quiz-form__input-box">
 						<input
 						class="quiz-form__radio"
 						id="answerYesToSecondQuestion"
@@ -40,9 +39,10 @@
 						type="radio"
 						value="No"
 						/>
+						<label class="quiz-form__label quiz-form__label_text" for="answerYesToSecondQuestion">No</label>
 						<div class="quiz-form__radio_custom-radio">
 						</div>
-					</label>
+					</div>
 					<div class="quiz-form__btn-box">
 						<button
 							class="
