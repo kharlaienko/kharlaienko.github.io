@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap')
+
+h1, h2,
+html, body, 
+ul, p
+	margin: 0
+	padding: 0
+
+
+ul
+	list-style: none
+
+
+button
+	border: none
+	background-color: transparent
+	padding: 0
+	margin: 0
+
+*, *::before, *::after
+	box-sizing: border-box
+	
+
+$font-primary: 'Oswald', sans-serif
+$font-color-lighter: #5f5f5f
+$font-color-primary: #444444
+$font-color-white: #fff
+$font-color-black-lighter: #2d2d2d
+$font-color-black: #000
+$font-color-light-green: #76C4BB
+$font-color-dark-green: #3c5e46
+$font-color-opacity-white: rgba(255, 255, 255, .77)
+
+@keyframes companiesHide
+	0%
+		width: 100%
+	100%
+		width: 0
+		
+
+body
+	font-family: $font-primary
+	font-weight: 300
+	font-size: 1rem
+
+body, html
+	height: 100%
+
+.wrapper
+	padding: 1rem 0
+	height: 100%
+
+.container
+	max-width: 100rem
+	padding: 0 1rem
+	margin: 0 auto
+
+.content
+	padding-top: 2rem 0
+
+.login_btn
+	cursor: pointer
+
+.login_btn > span
+	display: block
+
+	letter-spacing: 0.05em
+	font-size: 0.7rem
+	font-family: $font-primary
+	color: $font-color-lighter
+
+.promo
+	display: flex
+	align-items: flex-end
+	position: relative
+
+	&__text-box
+		position: absolute
+		bottom: 5%
+		left: 50%
+		transform: translateX(-50%)
+
+		background-color: $font-color-opacity-white
+		
+		padding: 2.5rem 2rem
+			
+		border-radius: 2.5rem 2.5rem 2.5rem 2.5rem
+
+		width: 94%
+	
+		font-size: 2rem
+
+	&__text-list
+		margin-bottom: 2rem
+
+	&__text-list_item
+		padding-left: 1rem
+		position: relative
+		color: $font-color-primary
+
+	&__text-list_item p
+		letter-spacing: 1px
+		line-height: 1.3em
+		font-size: 1.7rem
+
+	&__text
+		color: $font-color-black-lighter
+		font-size: 1.7rem
+		line-height: 1.4em
+		font-weight: bold
+
+	&-img__box
+		width: 100%
+		border-radius: 1rem 1rem 1rem 1rem
+
+	&-img
+		width: 100%
+		border-radius: 5%
+
+	&__dot
+		background-color: $font-color-primary
+		margin-right: 0.5rem
+
+.dot
+	display: inline-block
+	border-radius: 100%
+	vertical-align: middle
+	height: 0.3rem
+	width: 0.3rem
+		
+.quiz
+
+	&__btn
+		background-color: $font-color-dark-green
+		cursor: pointer
+		text-align: left
+
+		width: 95%
+		padding: 0.9rem 0 1rem
+		padding-left: 20%
+		margin-bottom: 1rem
+
+		border-radius: 1.6rem 1.6rem 1.6rem 1.6rem
+
+		font-size: 3.3rem
+		line-height: 1.5em
+		color: $font-color-white
+		font-family: $font-primary
+		font-weight: 300
+		letter-spacing: 5px
+
+		position: relative
+
+		vertical-align: middle
+
+		&::after
+			content: url("../img/arrowInCircle.png")
+			position: absolute
+			right: 10%
+			bottom: 0
+			transform: scale(0.5) translateY(30%)
+
+	&__subtitle
+		letter-spacing: 1px
+		margin-bottom: 2rem
+
+		max-width: 24rem
+	
+		font-size: 0.9rem
+		font-weight: 300
+		color: $font-color-lighter
+		letter-spacing: 1px
+		
+	&__subtitle > span
+		font-weight: 900
+
+	&__title
+		color: $font-color-black-lighter
+		font-size: 2rem
+		margin-bottom: 3rem
+		line-height: 1.2em
+		max-width: 35rem
+		font-weight: bold
+
+	&__title .free-word
+		color: $font-color-light-green
+
+	&__text
+		font-size: 0.9rem	
+		max-width: 25rem
+		color: $font-color-lighter
+		letter-spacing: 1px
+
+		margin-bottom: 2rem
+		
+	&__text > span
+		font-weight: 900
+
+	&-companies
+		width: 75%
+
+	&-companies__btn
+		display: block
+		cursor: pointer
+		width: 100%
+		padding: 1rem 0
+		position: relative
+		background-color: darken($font-color-white, 30%)
+
+		&::after
+			content: ''
+			height: 0.1rem
+			background-color: $font-color-white
+			width: 90%
+			position: absolute
+			left: 1%
+
+		&::before
+			content: '' 
+			transition: all 0.4s ease 
+			background: url('../img/arrowDown.svg')
+			width: 2rem
+			height: 1.8rem
+			position: absolute
+			right: 0
+			transform: translateY(-50%)
+	
+	&-companies__check
+		display: none
+	
+		&:checked + .quiz-companies__btn
+			background-color: darken($font-color-white,40%)
+			
+		&:checked + .quiz-companies__btn::before
+			content: ''
+			background: url('../img/arrowUp.svg')
+
+		&:checked ~ .quiz-companies__img
+			margin-top: 0.5rem
+			height: 3rem
+			width: 100%
+
+	&-companies__img
+		transition: height 0.4s ease
+		width: 0
+		height: 0
+
+.login-register-link
+	display: block
+	
+	font-size: 1.2rem
+	color: $font-color-dark-green
+	
+	margin-left: 2rem
+	margin-bottom: 5.5rem
+
+
+@media  ( max-width: 1370px  )
+	.promo
+
+		&__text-box
+			padding: 2rem
+
+		&__text > span
+			font-size: 1.6rem
+
+		&__text-list_item p
+			font-size: 1.6rem
+
+	.quiz__btn > span
+		font-size: 2rem
+	
+	.quiz__subtitle > span
+		font-size: 0.8rem
+
+	.quiz
+		
+		&__btn
+			padding: .8rem 0.8rem
+			padding-left: 20%
+			margin-bottom: 1rem
+			font-size: 2.5rem
+
+			&::after
+				transform: scale(0.5) translateY(40%)
+
+		&__subtitle
+			
+			margin-bottom: 1rem
+
+		&__title
+			font-size: 1.6rem
+			margin-bottom: 2.8rem
+
+		&__text
+			margin-bottom: 1.8rem
+
+	.login-register-link
+		margin-bottom: 2rem
+
+@media (min-width: 1166px)
+	.wrapper
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+
+	.quiz
+		width: 40%
+		margin-bottom: 1.5rem
+
+	.promo
+		margin-right: 5rem
+
+		width: 60%
+		display: flex
+		align-items: flex-end
+
+	.login_btn
+		position: absolute
+		right: 1%
+		top: 0
+
+	.content-box
+		display: flex
+		align-items: flex-end
+		position: relative
+
+@media  ( max-width: 1165px  )
+	.container
+		max-width: 42rem
+
+	.promo
+		margin-bottom: 1rem
+
+		&__text-box
+			font-size: 1.5rem
+
+	.quiz
+		text-align: center
+
+		&__subtitle 
+			margin: 0 auto
+			margin-bottom: 2rem
+			max-width: 46ch
+			font-size: 1rem
+			font-weight: 300
+			color: $font-color-lighter
+
+		&__title
+			margin: 0 auto
+			margin-bottom: 2rem
+			line-height: 2rem
+			max-width: 29ch
+
+		&__btn 
+			margin: 0 auto
+			padding: .6rem 0.8rem
+			padding-left: 20%
+			margin-bottom: 0.8rem
+			padding-left: 30%
+
+			&::after
+				transform: scale(0.4) translateY(60%)
+
+		&__text
+			margin: 0 auto
+
+		&__text
+			font-size: 1rem
+			margin-bottom: 1.8rem
+
+		&__subtitle
+			margin-bottom: 1rem
+
+		&-companies
+			margin: 0 auto 
+
+	.login-register-link
+		margin-bottom: 2rem
+		margin-left: 0
+
+	.login_btn
+		margin-bottom: 1rem
+		display: block
+		margin-left: auto
+
+	.content-box
+		display: block
+
+	.promo
+		padding: 0
+
+		display: block
+
+		&__text-box
+			font-size: 1.2rem 
+			max-width: 38rem
+
+		&-img__box
+			text-align: center
+			max-width: 40rem
+			margin: 0 auto
+
+@media (max-width: 620px)
+	.promo
+
+		&__text-box
+			text-align: center
+			font-size: 0.9rem
+			padding: 1.5rem
+
+		&__text
+			line-height: 1em
+
+		&__text-list
+			margin-bottom: 1rem
+
+
+	.quiz
+		&__btn
+			padding-left: 20%
+			&::after
+				transform: scale(0.4) translateY(60%)
+
+
+
+@media (max-width: 524px)
+	.promo
+
+		&__text-box
+			text-align: center
+			padding: 1rem
+
+		&__text > span
+			font-size: 1.2rem
+			line-height: 1em
+
+		&__text-list_item p
+			font-size: 1.2rem
+			margin-bottom: 0.5rem
+
+
+@media (max-width: 460px)
+	.quiz
+		&__btn 
+			padding-left: 15%
+
+			&::after
+				transform: scale(0.4) translateY(60%)
+
+@media (max-width: 428px)
+	.promo
+
+		&__text-box
+			text-align: center
+			font-size: 1rem
+			padding: 1rem
+
+		&__text > span
+			font-size: 1rem
+			line-height: 1em
+
+		&__text-list_item p
+			font-size: 1rem
+			margin-bottom: 0.5rem
+
+		&-img
+			min-height: 21rem 
+
+
+	.quiz
+		&__btn 
+
+			&::after
+				right: 3%
+				transform: scale(0.4) translateY(60%)
