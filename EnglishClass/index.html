@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru-en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/normalize.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>English Class</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__box">
+						<a class="logo">
+							<img
+								src="./img/logo.svg"
+								alt="logo"
+								class="logo__img"
+							/>
+						</a>
+						<nav class="nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="#buy" class="nav__link">Купить</a>
+								</li>
+								<li class="nav__item">
+									<a href="#advantages" class="nav__link"
+										>Преимущества</a
+									>
+								</li>
+								<li class="nav__item">
+									<a href="#price" class="nav__link">Тарифы</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="main-content">
+				<section class="main">
+					<div class="container">
+						<div class="main__box">
+							<p class="main__text">
+								Проблемы с произношением? Хочешь удивить всех
+								своим умением произносить название машин
+								правильно?
+							</p>
+							<button type="button" class="main__btn">
+								How To Pronounce Cars
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="advantages" id="advantages">
+					<div class="container">
+						<div class="advantages__box">
+							<h1 class="advantages__title section-title">
+								ПРЕИМУЩЕСТВА
+							</h1>
+							<p class="advantages__text section-text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Proin nisi, tincidunt ipsum
+								ipsum arcu, ut. Posuere ipsum, quisque dictumst
+								auctor nisl. Amet mattis lacus at sollicitudin
+								aliquet elit dis euismod. Accumsan sit consequat
+								pharetra.
+							</p>
+						</div>
+					</div>
+				</section>
+                <section class="price" id="price">
+                    <div class="container">
+                        <div class="price__box">
+                            <h2 class="price__title section-title">
+                                Тарифы
+                            </h2>
+                            <div class="price-cards">
+                                <div class="price-сard">
+                                    <h3 class="price-сard__title">Скоростной</h3>
+                                    <ul class="price-card__list">
+                                        <li class="price-card__item section-text">Кол-во дней: <span>90</span></li>
+                                        <li class="price-card__item section-text">Уровень: <span>Intermediate</span></li>
+                                        <li class="price-card__item section-text">Цена: <span>20.000$</span></li>
+                                    </ul>
+                                    <button class="price-card__btn main__btn" type="button">
+                                        I choose this!
+                                    </button>
+                                </div>
+
+                                <div class="price-сard">
+                                    <h3 class="price-сard__title">Уверенный</h3>
+                                    <ul class="price-card__list">
+                                        <li class="price-card__item section-text">Кол-во дней: <span>90</span></li>
+                                        <li class="price-card__item section-text">Уровень: <span>Intermediate</span></li>
+                                        <li class="price-card__item section-text">Цена: <span>20.000$</span></li>
+                                    </ul>
+                                    <button class="price-card__btn main__btn" type="button">
+                                        I choose this!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="advantages buy" id="buy">
+					<div class="container">
+                        <h2 class="buy__title sectio-title">
+                            Купить
+                        </h2>
+                        <form action="#" class="buy__form">
+                            <label for="prices">Выбирите подходящий тариф</label>
+                            <select name="prices" id="prices">
+                                <option value="speedy">Cкоростной</option>
+                                <option value="bold">Уверенный</option>
+                            </select>
+                            <button type="submit" class="buy__btn main__btn">
+                                Buy
+                            </button>
+                        </form>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
