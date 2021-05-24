@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap')
+
+h1, h2, h3,
+html, body, 
+ul, p
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+
+button
+	border: none
+	background-color: transparent
+	padding: 0
+	margin: 0
+
+*, *::before, *::after
+	box-sizing: border-box
+
+$font-primary: 'Oswald', sans-serif
+$form-color-light-green: #76c4ba
+$form-color-grey: #5f5f5f
+$form-color-answered:#F2F4F3
+$font-color-dark-green: #3c5e46
+$form-color-dark-grey: #606060
+$font-color-white: #fff
+$btn-shadow-color: #c9ccca
+$category-choosen: #dcf2d7
+$category-hover: #76c4bb
+$category-radio-circle: #3c5f46
+$category-bg: #f2faf1
+$category-scroll: #e6e7e8
+$font-color-grey: #5f5f5f
+$font-color-light-green: #76c4ba
+$shadow-btn-category: #d6d7d6
+
+body
+	font-family: $font-primary
+	font-size: 1rem
+	font-weight: 400
+	color: $font-color-grey
+
+body, html
+	height: 100%
+
+.wrapper
+	height: 100%
+
+.container
+	max-width: 100rem
+	padding: 0 1rem
+	margin: 0 auto
+	
+	position: relative
+
+.category-main
+	padding: 2rem 0
+
+.profile-btn
+	position: absolute
+	top: 0
+	right: 6rem
+
+	display: flex
+	align-items: center
+
+	font-family: $font-primary
+	letter-spacing: 0.1em
+	color: $font-color-grey
+	font-size: 1.6rem
+	font-weight: 300
+
+	cursor: pointer
+
+	&__name
+		margin-left: 0.15rem
+		color: $font-color-light-green
+	
+	&__img
+		height: 4rem
+		margin-left: 3rem
+
+	&__img > img
+		height: 100%
+
+.category-content
+	display: flex
+	justify-content: center
+	align-items: flex-end
+
+.category
+	padding-top: 3rem
+	padding-bottom: 3rem 
+	max-width: 55%
+
+	&__title
+		font-size: 2.2rem
+		font-weight: 300
+		letter-spacing: 0.04em
+		line-height: 1.2em
+		padding-left: 5rem
+		padding-right: 5rem
+
+
+		& > span
+			font-weight: bold
+
+	&-form
+		&__form
+			overflow-y: scroll
+			margin-top: 0.4rem
+			padding-right: 0.8rem
+
+			&::-webkit-scrollbar
+				background-color: #e6e7e8
+				border-radius: 1rem
+				width: 1.4rem
+
+			&::-webkit-scrollbar-button 
+				background-repeat: no-repeat
+				background-size: contain
+				border: 2px solid $category-scroll
+				border-radius: 100%
+				height: 1.4rem
+
+			&::-webkit-scrollbar-button:start:decrement 
+				background-image: url('../img/scrollBtnWithArrowUp.png')
+
+			&::-webkit-scrollbar-button:end:increment 
+				background-image: url('../img/scrollBtnWithArrowDown.png')
+				 
+			
+			&::-webkit-scrollbar-thumb:vertical
+				background-repeat: no-repeat
+				background-size: contain
+				border: 2px solid $category-scroll
+				background-color: $font-color-white
+				max-height: 10px
+
+		&__form-wrapper
+			border-radius: 1rem 1rem 1rem 1rem
+			padding: 0.3rem 0.4rem
+			position: relative
+			
+		&__form-wrapper::before
+			content: ''
+			background-color: $font-color-white
+			position: absolute
+			height: 100%
+			top: 0
+			left: 0
+			width: 5rem
+		
+		&__form-wrapper::after
+			content: ''
+			background-color: $category-bg
+			z-index: -1
+			position: absolute
+			height: 100%
+			top: 0
+			left: 5rem
+			width: 87.5%
+			border-radius: 1rem 1rem 1rem 1rem
+
+
+		&__label
+			display: block
+
+			margin: 0 auto
+			padding: 0.4rem 0.8rem
+			
+			font-weight: 300
+			font-size: 2.2rem
+			letter-spacing: 0.04em
+
+			border-radius: 0.6em 0.6em 0.6em 0.6em
+
+			transition: background 0.3s ease-out
+			position: relative
+			margin-left: 5rem
+
+			&:hover
+				background:	$category-hover
+				color: $font-color-white
+
+			&::after
+				content: ''
+				position: absolute
+
+				border: 2px solid $category-radio-circle
+				border-radius: 100%
+
+				width: 2rem	
+				height: 2rem	
+
+				top: 50%
+				left: -3.5rem
+				transform: translateY(-50%)
+
+			&::before
+				content: url('../img/check.png')
+				position: absolute
+				width: 2rem	
+				height: 2rem	
+
+				top: 50%
+				transform: translate(-8%, -60%) scale(0.35)
+				left: -3.5rem
+
+				transition: opacity 0.3s linear
+				opacity: 0
+		
+		&__checkbox
+			display: none
+
+			&:checked + .category-form__label
+				background: $category-choosen
+
+			&:checked + .category-form__label:hover
+				background:	$category-hover
+				color: $font-color-white
+
+			&:checked + .category-form__label::before
+				transition: opacity 0.3s linear
+				opacity: 1
+
+		&__input-box
+			margin-top: 0.5rem
+
+.buy
+	width: 40%
+
+	&__box
+		position: relative
+		margin-bottom: 5rem
+
+	&__img
+		display: block
+		width: 100%
+
+	&__img-content
+		position: absolute
+		bottom: 0
+		left: 55%
+		transform: translateX(-50%)
+		width: 26rem
+
+	&__text
+		font-weight: 400
+		font-size: 1.7rem
+		line-height: 1.2em
+		letter-spacing: 0.1rem
+		margin-bottom: 4.5rem
+
+	&__btn-img
+		font-family: $font-primary
+		color: $font-color-grey
+		font-size: 1.7rem
+		letter-spacing: 0.1rem
+		font-weight: 400
+		
+		box-shadow: 0.2rem 0.2rem 1rem 0.2rem $shadow-btn-category
+
+		padding: 0.5rem
+		width: 100%
+		border: 2px solid $category-radio-circle
+		border-radius: 1.5rem 1.5rem 1.5rem 1.5rem
+
+	&__btn-box
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-left: 1.8rem
+		width: 100%
+
+	&__btn
+		display: block
+		background-color: $font-color-dark-green
+		font-family: $font-primary
+		color: $font-color-white
+		font-weight: 400
+		font-size: 1.5rem
+		letter-spacing: 0.1rem
+
+		padding: 0.8rem	
+
+		width: 100%
+		max-width: 17rem
+
+		cursor: pointer
+		border-radius: 1.5rem 1.5rem 1.5rem 1.5rem
+
+		position: relative
+
+		&-not-active
+			background-color: $form-color-dark-grey
+
+	&__btn:first-child
+		margin-right: 0.8rem
+
+	&__btn_back::after
+		content: url("../img/arrowLeft.svg")
+		width: 1.5em
+		height: 1.5em
+		position: absolute
+		left: 9%
+		top: 50%
+		transform: translateY(-50%)
+
+	&__btn_forward::after
+		content: url("../img/arrowRight.svg")
+		width: 1.5em
+		height: 1.5em
+		position: absolute
+		right: 9%
+		top: 50%
+		transform: translateY(-50%)
+
+	&__social
+		display: flex
+		align-items: center
+		margin-top: 1rem
+		margin-left: 4.5rem
+
+	&__social-icon
+		margin-right: 2.1rem
+		height: 1.3rem
+
+		&:last-child
+			margin-right: 0
+
+@media (max-width:1521px)
+	.buy
+		max-width: 50%
+
+		&__text
+			font-size: 1.5rem
+
+		&__btn-img
+			font-size: 1.4rem
+
+		&__btn
+			font-size: 1.2rem
+
+	.category
+		max-width: 50%
+
+		&__title
+			font-size: 2rem
+
+		&-form__label
+			font-size: 2rem
+	
+@media (max-width:1427px)
+	.buy
+		&__text
+			font-size: 1.5rem
+
+		&__btn-img
+			font-size: 1.4rem
+
+		&__btn
+			max-width: 45%
+			font-size: 1.2rem
+
+	.category
+		&__title
+			font-size: 2rem
+
+		&-form__label
+			font-size: 2rem
+
+
+@media (max-width: 1345px)
+	.buy
+		max-width: 55%
+		&__text
+			font-size: 1.3rem
+
+		&__btn-img
+			font-size: 1.2rem
+
+		&__btn
+			max-width: 45%
+			font-size: 1rem
+
+	.category
+		max-width: 45% 
+		&__title
+			font-size: 1.5rem
+			padding-left: 6rem
+
+		&-form__label
+			font-size: 1.5rem
+
+@media (max-width: 1300px)
+	.category
+		padding-top: 5rem
+		max-width: 55% 
+
+	.buy
+		max-width: 40%
+
+	
+	.profile-btn
+		right: 2rem
+
+		font-size: 1rem
+		&__img
+			height: 3rem
+
+
+@media (max-width: 1200px)
+	.buy
+		&__box
+			margin-bottom: 4rem
+
+		&__text
+			margin-bottom: 3.4rem
+			font-size: 1.1rem
+			
+		&__img-content
+			width: 18rem
+
+		&__btn-img
+			font-size: 1rem
+
+		&__btn
+			max-width: 45%
+			font-size: 0.9rem
+
+	.category
+		&__title
+			font-size: 1.3rem
+			padding-left: 6rem
+
+		&-form__label
+			font-size: 1.2rem
+
+			&::after
+				width: 1.5rem	
+				height: 1.5rem	
+
+			&::before
+				width: 1rem	
+				height: 1rem	
+				transform: translate(-5%, -65%) scale(0.25)
+		
+		&__input-box
+			margin-top: 0.5rem
+
+
+@media(max-width: 1092px)
+	.buy
+		max-width: 40%
+		&__box
+			margin-bottom: 3rem
+
+		&__text
+			margin-bottom: 2.5rem
+			font-size: 1rem
+			
+		&__img-content
+			width: 16rem
+
+		&__btn-img
+			font-size: 0.9rem
+
+		&__btn
+			max-width: 45%
+			font-size: 0.9rem
+
+	.category
+		max-width: 60%
+		&__title
+			font-size: 1.3rem
+			padding-left: 6rem
+
+		&-form__label
+			font-size: 1.2rem
+
+@media(max-width: 982px)
+	.category-content
+		display: block
+
+	.category
+		width: 100%
+		max-width: none
+	
+	.buy
+		width: 50%
+		max-width: none
+		margin: 0 auto
+
+		&__social
+			justify-content: center
+			margin-top: 1rem
+			margin: 1rem auto 0
+
+		&__social-icon
+			margin-right: 1.5rem
+			height: 1rem
+
+			&:last-child
+				margin-right: 0
+
+@media(max-width: 713px)
+
+	.category
+		width: 100%
+		max-width: none
+	
+	.buy
+		width: 70%
+
+@media(max-width: 610px)
+	.buy
+		width: 100%
+
+		&__box
+			margin-bottom: 2rem
+
+		&__text
+			margin-bottom: 2.5rem
+			font-size: 1rem
+			
+		&__img-content
+			width: 16rem
+
+		&__btn-img
+			font-size: 0.9rem
+
+		&__btn
+			max-width: 45%
+			font-size: 0.9rem
+
+	.category
+
+		&__title
+			padding-left: 2rem
+			padding-right: 2rem
+		&-form__form-wrapper::after
+			width: 80%
+
+			
+
+@media (max-width:400px)
+	.category
+
+		&__title
+			padding-left: 0.5rem
+			padding-right: 0.5rem
+		
+		&-form__form-wrapper::before
+			width: 0
+
+		&-form__form-wrapper::after
+			width: 90%
+			left: 56%
+			transform: translateX(-50%)
+
+		&-form__label
+			margin-left: 2rem
+
+		&-form__label::after
+			left: -2rem
+
+		&-form__label::before
+			left: -2rem
