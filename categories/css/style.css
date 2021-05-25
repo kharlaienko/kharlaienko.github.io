@@ -234,6 +234,7 @@ body, html {
 
 .buy {
   width: 40%;
+  padding-bottom: 1rem;
 }
 .buy__box {
   position: relative;
