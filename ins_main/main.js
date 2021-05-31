@@ -30,9 +30,11 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 	function companiesPopUpClickHandler(event){
 		const popUpBtnClose = quizPopUp.children[1].children[0];
-		if (event.target === popUpBtnClose){
-			closeCompaniesPopUp();
+		const popUpLink = quizPopUp.children[1].children[1];
 
+		if (event.target === popUpBtnClose || event.target === popUpLink){
+			closeCompaniesPopUp();
+			console.log(popUpLink);
 			let timeoutClosePopUp = setTimeout( () => {
 				addListenerToPopUp();
 				clearTimeout(timeoutClosePopUp);
