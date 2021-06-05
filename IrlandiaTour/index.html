@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Тур по Ирландии</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__box">
+                    <div class="logo">
+                        <a href="#" class="logo__link">
+                            <img class="logo__img" src="./img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list flex-jcc-aic">
+                            <li class="nav__item"><a href="./gallery.html" class="nav__link font-weight-500 font-montserrat">Все туры</a></li>
+                            <li class="nav__item"><a href="./gallery.html" class="nav__link font-weight-500 font-montserrat">Отзывы</a></li>
+                            <li class="nav__item"><a href="#" id="contacts" class="nav__link font-weight-500 font-montserrat">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="main__box">
+                    <h1 class="main__title font-weight-700 font-playfair">
+                        Открой для себя Ирландию!
+                    </h1>
+                    <h3 class="main__subtitle font-weight-500 font-montserrat">
+                        Авторские туры по экзотическим уголкам
+                    </h3>
+                    <div class="btn-box">
+                        <button type="button" class="order-brn font-montserrat font-weight-600">
+                            Оставить заявку
+                        </button>
+                        <div class="play-btn-box">
+                            <a href="./gallery.html" class="play">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <p class="play__text font-montserrat font-weight-400">
+                                    Галерея 2020-2021
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <h3 class="footer__title font-montserrat font-weight-400">
+                    Подписывайтесь на нас в соцсетях!
+                </h3>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <img src="./img/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <img src="./img/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__nav-link" href="#">
+                                <img src="./img/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <div class="popup">
+            <form action="#" method="post" class="popup__form">
+                <label class="popup-form__label font-montserrat font-weight-500" for="name">Ваше имя</label>
+                <input class="popup-form__input font-montserrat" type="text" name="name" id="name" autocomplete="off">
+    
+                <label class="popup-form__label font-montserrat font-weight-500" for="email">Ваше email</label>
+                <input class="popup-form__input font-montserrat" type="email" name="email" id="email" autocomplete="off">
+    
+                <button class="order-brn font-montserrat font-weight-700 popup-form__button" type="submit">Отправить</button>
+            </form>
+    
+            <p class="popup-form__thanks">Спасибо</p>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
