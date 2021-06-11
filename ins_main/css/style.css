@@ -95,7 +95,6 @@ body, html {
   .promo__text-list {
     margin-bottom: 2rem; }
   .promo__text-list_item {
-    padding-left: 1rem;
     position: relative;
     color: #444444; }
   .promo__text-list_item p {
@@ -305,7 +304,6 @@ body, html {
     .promo__text-list {
       margin-bottom: 1rem; }
     .promo__text-list_item {
-      padding-left: 1rem;
       position: relative;
       color: #444444; }
     .promo__text-list_item > p {
@@ -346,7 +344,6 @@ body, html {
     .promo__text-list {
       margin-bottom: 1rem; }
     .promo__text-list_item {
-      padding-left: 0.6rem;
       position: relative;
       color: #444444; }
     .promo__text-list_item > p {
@@ -559,8 +556,6 @@ body, html {
 
   .promo__text-list {
     margin-bottom: 1rem; }
-  .promo__text-list_item {
-    padding-left: 0.4rem; }
   .promo__text-list_item > p {
     letter-spacing: 1px;
     font-size: 0.95rem;
@@ -596,8 +591,6 @@ body, html {
       padding: 1.5rem; }
     .promo__text-list {
       margin-bottom: 0.7rem; }
-    .promo__text-list_item {
-      padding-left: 0.4rem; }
     .promo__text-list_item > p {
       letter-spacing: 1px;
       font-size: 0.75rem;
