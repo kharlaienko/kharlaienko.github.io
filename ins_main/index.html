@@ -74,7 +74,7 @@
         (function (w, d) {
 
             var targetLocation = function () {
-                var url = window.location.origin + '/index2.html';
+                var url = window.location.origin + '/ins_main/index2.html';
                 w.history && w.history.pushState && w.history.pushState(null, null, w.location);
                 w.addEventListener && w.addEventListener('popstate', function () {
                     w.location = url
