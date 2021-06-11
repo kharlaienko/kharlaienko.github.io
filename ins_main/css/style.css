@@ -228,10 +228,8 @@ body, html {
     font-weight: 900; }
   .quiz-companies {
     display: block;
-    width: 75%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto; }
+    width: 100%;
+    position: relative; }
     .quiz-companies__img {
       width: 100%; }
     .quiz-companies__link {
@@ -477,8 +475,6 @@ body, html {
 @media (max-width: 776px) and (orientation: portrait) {
   .quiz {
     width: 50%; }
-    .quiz-companies {
-      width: 76%; }
 
   .promo {
     width: 50%; }
@@ -580,6 +576,10 @@ body, html {
 @media (max-width: 370px) and (orientation: portrait) {
   .quiz {
     width: 98%; }
+    .quiz-companies {
+      width: 76%;
+      margin-left: auto;
+      margin-right: auto; }
     .quiz__title {
       font-size: 0.95rem; }
     .quiz__btn {
